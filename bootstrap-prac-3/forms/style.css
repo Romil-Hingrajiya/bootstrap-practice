@@ -1,0 +1,64 @@
+/*
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+article.container{
+    background-color: rgb(26, 27, 27);
+}
+h2{
+    font-size: 3rem;
+    color: blue;
+    font-weight: bolder;
+    padding: 1rem 0rem;
+}
+form{
+    background-color: rgb(216, 217, 218);
+    padding: 0% 2rem;
+    width: 80%;
+    border-radius: 5px;
+}
+form .personal-info article{
+    padding: 1rem;
+}
+form .personal-info article label{
+    color: black;
+    font-size: 1.2rem;
+}
+form .personal-info article input{
+    padding: .5rem;
+    border-radius: 10px;
+}
+form .personal-info article input:hover{
+    box-shadow: 2px 2px 5px blue;
+}
+textarea{
+    border-radius: 10px;
+    padding: 1rem;
+}
+textarea:hover{
+    box-shadow: 2px 2px 5px blue;
+}
+article .row label{
+    margin-right: -2.6rem;
+}
+*/
+form{
+    background-color: rgb(219, 223, 227);
+}
+.gender{
+    background-color: #FFFFFF;
+    width: 97%;
+    position: relative;
+    left: 1.5%;
+    border-radius: 5px;
+}
+.language{
+    background-color: #FFFFFF;
+    width: 97%;
+    position: relative;
+    left: 1.5%;
+    border-radius: 5px;
+}

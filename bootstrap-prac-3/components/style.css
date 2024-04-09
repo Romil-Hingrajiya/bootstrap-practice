@@ -1,0 +1,119 @@
+.accordion-item{
+    background-color: bisque !important;
+    margin: 1rem 0rem !important;
+    border: 2px solid black !important;
+    border-radius: 5px !important;
+}
+.accordion-button{
+    color: black;
+    background-color: rgb(174, 162, 184) !important;
+    box-shadow: none !important;
+}
+.alert svg{
+    width: 2rem !important;
+    height: 2rem !important;
+}
+.card{
+    background-color: rgb(163, 227, 252);
+    border: none !important;
+}
+.card-link{
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+}
+.bg-info{
+    background-color: blue !important;
+}
+ul li{
+    list-style-position: inside;
+}
+.card-footer{
+    background-color: rgb(95, 95, 95) !important;
+}
+.carousel{
+    border: 10px inset black;
+}
+/*
+.outer-navbar{
+    position: sticky;
+    width: 100%;
+    height: 15rem;
+    background-color: #FFC107;
+    display: flex;
+    align-items: center;
+    top: -60px;
+    z-index: 100;
+}
+.outer-navbar .inner-navbar{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100; 
+}*/
+.my-tooltip{
+    --bs-tooltip-bg: red;
+    color: antiquewhite;
+}
+.my-tooltip2{
+    --bs-tooltip-bg: green;
+    --bs-tooltip-color: black;
+    font-weight: bolder;
+    line-height: 2rem;
+}
+.dropdown-toggle{
+    position: relative !important;
+}
+.dropdown-menu{
+    background-color: #d7cba6;
+    width: 50vw;
+    position: absolute !important;
+    top: 3rem !important;
+    left: -20vw !important;
+}
+.dropdown-item{
+    font-weight: bolder;
+    text-align: center;
+}
+.modal-body{
+    background-color: black;
+    color: azure;
+}
+.modal-header{
+    background-color: antiquewhite;
+    color: black;
+    font-weight: bolder;
+}
+.btn-close-modal{
+    font-size: 30px;
+}
+.modal-footer{
+    background-color: antiquewhite;
+}
+.custom-popover{
+    --bs-popover-border-color: blue;
+    --bs-popover-header-bg: blue;
+    --bs-popover-header-color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+footer{
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    margin-top: 2rem;
+}
+aside{
+    background-color: #212529;
+}
+.nav-tabs .nav-link.active{
+    background-color: rgb(70, 70, 70);
+}
+.tabs{
+    background-color: #212529;
+    padding: 1rem;
+}

@@ -1,0 +1,412 @@
+.section-header{
+    font-size: 32px;
+    font-weight: bold;
+    color: $primary-color;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+
+    &::before{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 50px;
+        height: 3px;
+        background-color: #149ddd;
+    }
+}
+
+
+#main{
+    margin-left: 300px;
+
+    #about{
+        .about-container{
+            padding: 2rem;
+            font-family: "Raleway", sans-serif;
+
+            .section-title{
+                h2{
+                    @extend .section-header;
+                }
+            }
+    
+            .row{
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+                h3{
+                    font-size: 26px;
+                    font-weight: 700;
+                    color: $primary-color;
+                }
+    
+                .row{
+                    ul{
+                        margin-left: -3rem;
+                        li{
+                            list-style-type: none;
+                            margin-bottom: 20px;
+                            position: relative;
+    
+                            strong{
+                                font-weight: 700;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #facts{
+        .facts-container{
+            padding: 2rem;
+
+            .section-title{
+                h2{
+                    @extend .section-header;
+                }
+            }
+    
+            .row{
+                margin-top: 3rem;
+    
+                .fact-details{
+                    h1{
+                        font-weight: bolder;
+                        font-size: 40px;
+                        color: $fact-subtitle-color;
+                    }
+                }
+            }
+        }        
+    }
+
+    #skills{
+        background-color: $secondary-bg;
+
+        .skills-container{
+            padding: 2rem;
+
+            .section-title{
+                h2{
+                    @extend .section-header;
+                }
+            }
+            
+            .row{
+                margin-top: 2rem;
+                padding-bottom: 3.5rem;
+                .progress{
+                    border-radius: 0%;
+                    height: .5rem;
+                    margin: 1rem 0rem;
+                    
+                    .progress-bar{
+                        background-color: $primary-bg;
+                    }
+                }
+            }
+        }
+        
+    }
+
+    #resume{
+        margin-top: 3.5rem;
+        font-family: "Raleway", sans-serif;
+
+        .resume-container{
+            padding: 2rem;
+
+            .section-title{
+                h2{
+                    @extend .section-header;
+                }
+                padding-bottom: 2rem;
+            }
+    
+            .row{
+                .resume-data{
+                    border-left: $resume-border;
+                    padding-left: 1rem;
+                }
+                h3{
+                    font-size: 26px;
+                    font-weight: 600;
+                    color:  #050d18;
+                }
+                h5{
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: #050d18;
+                    position: relative;
+
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        left: -1.7rem;
+                        top: 0rem;
+                        width: 22px;
+                        height: 22px;
+                        border-radius: 50%;
+                        background-color: white;
+                        border: $resume-border;
+                    }
+                }
+                p{
+                    line-height: 25px;
+                    font-size: 18px;
+                }
+                li{
+                    line-height: 32px;
+                    font-size: 18px;
+                }
+                button{
+                    background-color: $resume-btn-bg;
+                    font-size: 14px;
+                    font-weight: 600;
+                    padding: .5rem;
+                    border: 0px;
+                }
+            }
+        }
+    }
+
+    #portfolio{
+        padding: 2rem;
+        background-color: $secondary-bg;
+
+        .portfolio-container{
+            .section-title{
+                h2{
+                    @extend .section-header;
+                }
+            }
+            .grid-container{
+                padding-top: 1rem;
+                text-align: center;
+
+                .btn-group{
+                    background-color: #fff;
+                    border-radius: 20px;
+
+                    .btn{
+                        padding: .5rem 1rem;
+
+                        &:hover{
+                            border: none;
+                        }
+                        &:active{
+                            border: none;
+                        }
+                        &:focus{
+                            border: none;
+                        }
+                        &:visited{
+                            border: none;
+                        }
+                    }
+                }
+
+                .grid{
+                    margin: 3rem 0rem;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+
+                    .grid-item{
+                            width: 350px;
+                            height: 270px;
+                            margin: .5rem;
+
+                            @media screen and (max-width: 992px) {
+                                width: 300px;
+                                height: 250px;                            
+                            }
+                        }
+                        
+                        @media screen and (max-width: 992px) {
+                            grid-template-columns: repeat(1fr,3);                            
+                        }
+                    }
+                }
+            }
+    }
+
+    #services{
+        margin-top: 3.5rem;
+
+        .services-container{
+            padding: 2rem;
+
+            .section-title{
+                h2{
+                    @extend .section-header;
+                }
+                padding-bottom: 1.5rem;
+            }
+    
+            .row{
+                padding-bottom: 3.5rem;
+    
+                h5{
+                    font-size: 18px;
+                    font-weight: 700;
+                    color: #050d18;
+                    margin-top: .5rem;
+                    padding-bottom: .5rem;
+                }
+            }
+        }
+        
+    }
+
+    #testimonials{
+        background-color: $secondary-bg;
+
+        .testimonial-container{
+            padding: 2rem;
+
+            .section-title{
+                h2{
+                    @extend .section-header;
+                }
+            }
+
+            .swiper{
+                width: 100%;
+                position: relative;
+
+                .swiper-wrapper{
+
+                    .swiper-slide{
+                        
+                        .slides{
+                            width: 100%;
+                            text-align: center;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+
+                            .review{
+                                background-color: #fff;
+                                border: 2px solid white;
+                                border-radius: 5px;
+                                box-shadow: .5px .5px 5px grey;
+                                margin: 2rem 0rem;
+                                padding: .5rem 1.5rem;
+                            }
+                            .reviewer{
+                                padding-bottom: 2rem;
+
+                                h4{
+                                    margin-top: 1rem;
+                                    font-size: 18px;
+                                    font-weight: 600;
+                                    line-height: 5px;
+                                }
+                                p{
+                                    opacity: .6;
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #contact{
+        padding-bottom: 7rem;
+
+        .contact-container{
+            padding: 2rem;
+            font-family: "Raleway", sans-serif;
+
+            .section-title{
+                h2{
+                    @extend .section-header;
+                }
+                p{
+                    margin-bottom: 1.5rem;
+                }
+            }
+
+            .row{
+                .card{
+                    padding-top: 1rem;
+                    .d-flex{
+                        margin: 1rem 1rem;
+                        align-items: center;
+                        
+                        .contact-link{
+                            width: 50px;
+                            height: 50px;
+                            border-radius: 50%;
+                            background-color: #d3e7f0;
+    
+                            svg{
+                                margin-top: .7rem;
+                                margin-left: .5rem;
+                                stroke: $primary-bg;
+                                fill: $primary-bg;
+                            }
+
+                            &:hover{
+                                background-color: $link-color;
+                                svg{
+                                    stroke: white;
+                                    fill: white;
+                                }
+                            }
+                            
+                        }
+                        .contact-info{
+                            padding-top: .9rem;
+                            margin-left: 1rem;
+                            h5{
+                                font-size: 22px;
+                                font-weight: 550;
+                                line-height: 10px;
+                                font-family: "Raleway";
+                            }
+                            span{
+                                opacity: .8;
+                                font-size: 14px
+                            }
+                        }
+                    }
+                }
+
+                .contact-form{
+                    .row{
+                        padding: 1rem;
+                        
+                        label{
+                            margin: 1rem 0rem;
+                            font-weight: 400;
+                            font-size: 16px;
+                        }
+                        button{
+                            padding: .5rem 1.5rem;
+                            background-color: #37b3ed;
+                            color: #fff;
+                            border-radius: 5px;
+                            border: 0px solid transparent;
+                            margin-top: 1rem;
+                        }
+                    }
+                }
+            }
+            
+        }
+
+    }
+
+    @media screen and (max-width: 1199px) {
+        margin-left: 0px;
+    }
+
+}

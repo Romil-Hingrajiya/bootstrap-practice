@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+    crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css">
+    <title>Utilities</title>
+</head>
+<body>
+  
+    <section class="row">
+        <div class="col-10 col-lg-10" data-bs-spy="scroll" data-bs-target="#onscreen-item" data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary" tabindex="0">
+            
+            <section id="background" class="bg-warning-subtle bg-gradient">
+                <article class="container">
+                    <div class="row justify-content-between py-4" style="margin-top: 8rem">
+                        <div class="col-3 card bg-danger bg-gradient" style="height: 25rem;">
+        
+                        </div>
+                        <div class="col-3 card bg-success" style="height: 25rem;">
+        
+                        </div>
+                        <div class="col-3 card bg-success bg-opacity-50" style="height: 25rem;">
+        
+                        </div>
+                    </div>
+                </article>
+            </section>
+        
+            <section id="border" class="bg-warning-subtle bg-gradient">
+                <article class="container">
+                    <div class="row justify-content-between py-4" style="margin-top: 8rem">
+                        <div class="col-3 card bg-body-tertiary rounded-4 rounded-end-0 border border-3 border-end-0 border-primary " style="height: 25rem;">
+        
+                        </div>
+                        <div class="col-3 card bg-body-tertiary rounded-circle border border-danger border-5" style="height: 25rem;">
+        
+                        </div>
+                        <div class="col-3 card bg-body-tertiary rounded-4 border border-3 border-start-0 border-primary border-opacity-50" style="height: 25rem;">
+        
+                        </div>
+                    </div>
+                </article>
+            </section>
+        
+            <section id="color" class="bg-warning-subtle bg-gradient">
+                <article class="container">
+                    <div class="row justify-content-between py-4" style="margin-top: 8rem">
+                        <div class="col-3 card bg-info-subtle" style="height: 25rem;">
+                            <p class="text-danger bg-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, reprehenderit?</p>
+                            <p class="text-danger-emphasis bg-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, reprehenderit?</p>
+                        </div>
+                        <div class="col-3 card bg-info-subtle" style="height: 25rem;">
+                            <p class="text-primary bg-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, reprehenderit?</p>
+                            <p class="text-primary bg-dark text-opacity-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, reprehenderit?</p>
+                        </div>
+                        <div class="col-3 card bg-info-subtle bg-opacity-50" style="height: 25rem;">
+                            <p class="text-warning bg-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, reprehenderit?</p>
+                            <p class="text-warning bg-dark text-opacity-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, reprehenderit?</p>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        
+            <section id="display" class="bg-warning-subtle bg-gradient">
+                <article class="container">
+                    <div class="d-block d-lg-flex justify-content-lg-between py-4" style="margin-top: 8rem">
+                        <div class="col-lg-4 mx-auto card bg-dark-subtle" style="width: 24rem; height: 12rem;">
+        
+                        </div>
+                        <div class="col-lg-4 mx-auto card bg-info-subtle" style="width: 24rem; height: 12rem;">
+        
+                        </div>
+                        <!--
+                            <div class="d-table border border-3 border-dark mx-auto">
+                            <div class="d-table-row">
+                                <p class="d-table-cell">Country</p>
+                                <p class="d-table-cell">GDP</p>
+                                <p class="d-table-cell">Population</p>
+                            </div>
+                            <div class="d-table-row">
+                                <p class="d-table-cell">India</p>
+                                <p class="d-table-cell">50%</p>
+                                <p class="d-table-cell">121Cr.</p>
+                            </div>
+                            </div>
+                        -->
+                    </div>
+                </article>
+            </section>
+        
+            <section id="flex" class="bg-warning-subtle bg-gradient">
+                <article class="container">
+                    <div class="row justify-content-between py-4" style="margin-top: 8rem">
+                        <div class="col-3 card bg-info-subtle" style="height: 25rem;">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-inline-flex flex-row">
+                                    <h1>1</h1><h1>2</h1><h1>3</h1>
+                                </div>
+                                <div class="d-inline-flex flex-column">
+                                    <h1>1</h1><h1>2</h1><h1>3</h1>
+                                </div>
+                                <div class="d-inline-flex flex-column-reverse">
+                                    <h1>1</h1><h1>2</h1><h1>3</h1>
+                                </div>
+                                <div class="d-inline-flex flex-row-reverse">
+                                    <h1>1</h1><h1>2</h1><h1>3</h1>
+                                </div>
+                            </div>
+                            <div class="mt-2 d-flex justify-content-sm-start justify-content-md-end justify-content-lg-around bg-dark-subtle">
+                                <h1>1</h1><h1>2</h1><h1>3</h1>
+                            </div>
+                            <div class="d-flex mt-3">
+                                <p class="border border-2 border-dark bg-dark-subtle p-2">Lorem ipsum dolor sit amet.</p>
+                                <p class="border border-2 border-dark bg-dark-subtle flex-fill text-center p-2">1</p>
+                            </div>
+                            <div class="d-flex bg-dark-subtle">
+                                <div class="flex-grow-1 bg-success-subtle">Lorem, ipsum dolor.</div>
+                                <div class="fw-bolder">2</div>
+                                <div class="fw-bolder">3</div>
+                              </div>
+                              <div class="d-flex mt-2 bg-dark-subtle">
+                                <div class="w-100 fw-bolder text-center align-self-center">1</div>
+                                <div class="flex-shrink-1 bg-success-subtle">Lorem ipsum dolor</div>
+                              </div>
+                        </div>
+                        <div class="col-3 bg-info-subtle d-flex align-items-end align-items-md-center justify-content-evenly flex-wrap" style="height: 25rem;">
+                            <span style="font-size: 2rem; font-weight: bolder;" class="align-self-start">1</span>
+                            <span style="font-size: 2rem; font-weight: bolder;" class="align-self-baseline">2</span>
+                            <span style="font-size: 2rem; font-weight: bolder;">3</span>
+                            <span style="font-size: 2rem; font-weight: bolder;">4</span>
+                            <span style="font-size: 2rem; font-weight: bolder;" class="align-self-end">5</span>
+                            <span style="font-size: 2rem; font-weight: bolder;" class="align-self-lg-stretch bg-success-subtle">6</span>
+                        </div>
+                        <div class="col-3 card bg-info-subtle" style="height: 25rem;">
+                            
+                            <div class="d-flex align-items-center mt-3 bg-dark-subtle flex-wrap flex-md-nowrap">
+                                <div class="flex-shrink-0">
+                                  <img src="./images/media-object-img.jpeg" alt="..." width="66rem" height="66rem">
+                                </div>
+                                <div class="flex-grow-1 ms-3 fw-bold">
+                                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </div>
+                              </div>
+        
+                              <div class="d-flex mb-3 bg-dark-subtle mt-2">
+                                <div class="p-2">1</div>
+                                <div class="p-2">2</div>
+                                <div class="ms-auto p-2 fw-bolder">3</div>
+                              </div>
+                              <div class="d-flex mb-3 bg-dark-subtle mt-2">
+                                <div class="me-auto fw-bolder p-2">1</div>
+                                <div class="p-2">2</div>
+                                <div class="p-2">3</div>
+                              </div>
+        
+                        </div>
+                    </div>
+                </article>
+            </section>
+        
+            <section id="float" class="bg-warning-subtle bg-gradient">
+                <article class="container" style="margin-top: 8rem;">
+                    <div class="bg-info-subtle" style="height: 25rem;">
+                        <div class="float-start align-self-center" style="font-size: 2rem;">Float start on all viewport sizes</div><br>
+                        <div class="float-end" style="font-size: 2rem;">Float end on all viewport sizes</div><br>
+                        <div class="float-none" style="font-size: 2rem;">Don't float on all viewport sizes</div>
+                    </div>
+                </article>
+            </section>
+        
+            <section id="interactions" class="bg-warning-subtle bg-gradient">
+                <article class="container">
+                    <div class="row justify-content-between py-4" style="margin-top: 8rem;">
+                        <div class="col-12 card bg-info-subtle bg-gradient" style="height: 25rem;">
+                            <p class="fw-bold user-select-all bg-dark-subtle p-1"><span class="fw-bolder"><u>Select all</u></span> dolor sit amet consectetur adipisicing elit. Eveniet facilis recusandae, porro omnis deleniti laboriosam? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, officiis neque est non eveniet incidunt?</p>
+                            <p class="fw-bold user-select-none bg-dark-subtle p-1"><span class="fw-bolder"><u>Read Only</u></span> dolor sit amet consectetur adipisicing elit. Eveniet facilis recusandae, porro omnis deleniti laboriosam? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, officiis neque est non eveniet incidunt?</p>
+                            <p class="fw-bold user-select-auto bg-dark-subtle p-1"><span class="fw-bolder"><u>Select Your-self</u></span> dolor sit amet consectetur adipisicing elit. Eveniet facilis recusandae, porro omnis deleniti laboriosam? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, officiis neque est non eveniet incidunt?</p>
+                            <p class="bg-dark-subtle"><a href="#" class="pe-none stretched-link text-dark fw-bold"><u>Read Only</u> dolor sit amet consectetur adipisicing elit. Voluptate aspernatur culpa excepturi aperiam deleniti distinctio voluptates voluptatum ex,</a>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus magni, ipsam mollitia quibusdam quidem blanditiis, repellat eveniet dolorem eaque esse libero, aperiam alias! Ullam assumenda rerum cupiditate. Ea sapiente debitis obcaecati corrupti, eius, quas omnis id molestiae quia, odit cumque beatae aut tempora voluptate commodi nostrum? Eligendi eaque quasi tempora. </p>
+                        </div>  
+                    </div>
+                </article>
+            </section>
+        
+            <section id="links" class="bg-warning-subtle bg-gradient">
+                <article class="container">
+                    <div class="row" style="margin-top: 8rem;">
+                        <div class="col-12 card bg-info-subtle bg-gradient" style="height: 25rem;">
+                            <p><a class="link-dark link-opacity-100 link-opacity-10-hover link-underline-danger fw-bolder" href="#">Lorem ipsum dolor sit</a>, amet consectetur adipisicing elit. Eligendi, aliquam laudantium adipisci delectus ex dolorem.</p>
+                            <p><a href="#" class="link-secondary link-offset-3 link-underline-opacity-25 link-underline-opacity-100-hover">Secondary link</a></p>
+                            <p><a href="#" class="link-success link-offset-3 link-underline-opacity-25 link-underline-opacity-100-hover">Success link</a></p>
+                            <p><a href="#" class="link-danger link-offset-3 link-underline-opacity-25 link-underline-opacity-100-hover">Danger link</a></p>
+                            <p><a href="#" class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Warning link</a></p>
+                            <h2 class="text-center">some issues with link</h2>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            
+            <section id="object-opacity" class="bg-warning-subtle bg-gradient">
+                <article class="container" style="margin-top: 8rem;">
+                        <div class="row align-items-center justify-content-evenly bg-info-subtle" style="height: 25rem;">
+                            
+                            <div class="col-3">
+                                <img src="./images/media-object-img.jpeg" width="270em" height="270em" class="object-fit-contain bg-dark-subtle" alt="">                        
+                            </div>
+                            <div class="col-3">
+                                <img src="./images/media-object-img.jpeg" width="270em" height="270em" class="opacity-50 object-fit-fill bg-dark-subtle" alt="">
+                            </div>
+                            <div class="col-3">
+                                <img src="./images/media-object-img.jpeg" width="270em" height="270em" class="opacity-75 object-fit-cover bg-dark-subtle" alt="">
+                            </div>
+                            <div class="col-3">
+                                <img src="./images/media-object-img.jpeg" width="270em" height="270em" class="object-fit-scale bg-dark-subtle" alt="">
+                            </div>
+        
+                        </div>
+                </article>
+            </section>
+        
+            <section id="overflow" class="bg-warning-subtle bg-gradient">
+                <article class="container d-flex" style="margin-top: 8rem;">
+                    <div class="overflow-hidden bg-dark-subtle me-1" style="height: 25rem; width: 20rem;">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum voluptates obcaecati non impedit consectetur aliquid quia repellat facere et nemo quidem dolor ullam similique expedita aut saepe molestias fuga quo amet hic, sunt, officia sequi ipsa temporibus? Dolore repellat corporis reiciendis nobis explicabo pariatur molestiae cupiditate iusto cumque fugit, deleniti qui alias, voluptatem totam voluptate necessitatibus! Accusantium magni accusamus ipsum, quasi magnam quas qui dignissimos tenetur eos ipsam culpa at rem nostrum delectus laborum odio! Doloribus hic, earum eaque aperiam ullam ex. Nulla similique hic modi rerum totam quam, temporibus, magni mollitia assumenda optio rem iste pariatur maxime eius vel minima qui est impedit tempora deserunt distinctio! Sed ullam nihil ad tenetur, culpa excepturi! Deleniti libero, assumenda dolor voluptate porro expedita culpa laudantium, ab, reiciendis quas molestiae nam corrupti odit nostrum odio nobis! Rerum aliquid ex assumenda nisi natus ea repudiandae ducimus voluptatem quisquam, asperiores, eum odio iure accusantium suscipit illum. Quaerat quas veniam ducimus sequi doloremque aut dolor, eveniet officia quidem nostrum, magnam quod, ipsa maxime ex consequuntur quo vero ut! Minima eos perferendis vel aspernatur accusamus amet, corrupti blanditiis culpa ab vitae nisi alias sit deleniti obcaecati. Explicabo voluptatem tempora aliquid recusandae qui atque facere, laborum officiis aperiam repellendus quis officia iste neque, fugiat nisi non maxime voluptatum labore quasi ducimus vel illo doloribus saepe? Perspiciatis dolorem voluptas iste itaque illo velit quam possimus aspernatur quod quidem harum ducimus, aliquid unde libero voluptatibus incidunt? Nesciunt animi quas repudiandae sit perspiciatis eveniet nihil accusamus dolorem ipsum. Ipsam dolores id vel! Quasi cumque, in eligendi perspiciatis praesentium facere expedita amet voluptatibus fuga ex enim ipsam cum suscipit! Maiores veniam unde eum impedit tempore quia maxime deserunt accusamus tenetur consequatur aperiam repellat reprehenderit aspernatur nobis quae dignissimos error minima, est quibusdam odit aliquam explicabo quo! Veritatis non vitae doloribus ad doloremque? Voluptatibus omnis ad corporis officiis fugiat dolores doloribus tempora enim reiciendis. Voluptatibus vitae saepe temporibus quas iste culpa totam eius consequuntur molestias esse, dolores mollitia repellendus at assumenda quod in dolor nemo provident nostrum blanditiis atque. Cum quo illum excepturi optio, libero possimus reiciendis harum, adipisci aut minus ipsam inventore odit laudantium suscipit! Eum deleniti possimus non, placeat ea officiis atque amet molestias earum aliquid expedita sed quisquam deserunt. Placeat iusto velit iure debitis, dolorem corrupti doloremque facilis rem! Blanditiis, nostrum quos doloremque quae similique placeat saepe ad temporibus earum soluta suscipit quasi dolorem hic vitae consequatur adipisci at illo inventore officia distinctio mollitia neque velit voluptates eaque. Accusamus non velit facilis ipsa quasi vero aspernatur ipsum, voluptate quo illum quod officiis vitae recusandae fugiat quas nihil deleniti, quidem cumque aperiam consequatur est omnis? Voluptas velit est facilis aliquam nesciunt ex eos minus laudantium tenetur ipsa, consectetur sit ab voluptate incidunt, quidem, sint architecto iure aspernatur. Aperiam magni aliquam quia eaque qui? Similique ducimus suscipit alias dolorem maxime, provident est sequi vero in minus accusantium aliquam, unde laborum assumenda placeat. Voluptate veniam dolores impedit iusto nemo, culpa praesentium perferendis quisquam unde odio inventore optio animi, in, reprehenderit mollitia alias libero.
+                    </div>
+                    <div class="overflow-auto bg-dark-subtle me-1" style="height: 25rem; width: 20rem;">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum voluptates obcaecati non impedit consectetur aliquid quia repellat facere et nemo quidem dolor ullam similique expedita aut saepe molestias fuga quo amet hic, sunt, officia sequi ipsa temporibus? Dolore repellat corporis reiciendis nobis explicabo pariatur molestiae cupiditate iusto cumque fugit, deleniti qui alias, voluptatem totam voluptate necessitatibus! Accusantium magni accusamus ipsum, quasi magnam quas qui dignissimos tenetur eos ipsam culpa at rem nostrum delectus laborum odio! Doloribus hic, earum eaque aperiam ullam ex. Nulla similique hic modi rerum totam quam, temporibus, magni mollitia assumenda optio rem iste pariatur maxime eius vel minima qui est impedit tempora deserunt distinctio! Sed ullam nihil ad tenetur, culpa excepturi! Deleniti libero, assumenda dolor voluptate porro expedita culpa laudantium, ab, reiciendis quas molestiae nam corrupti odit nostrum odio nobis! Rerum aliquid ex assumenda nisi natus ea repudiandae ducimus voluptatem quisquam, asperiores, eum odio iure accusantium suscipit illum. Quaerat quas veniam ducimus sequi doloremque aut dolor, eveniet officia quidem nostrum, magnam quod, ipsa maxime ex consequuntur quo vero ut! Minima eos perferendis vel aspernatur accusamus amet, corrupti blanditiis culpa ab vitae nisi alias sit deleniti obcaecati. Explicabo voluptatem tempora aliquid recusandae qui atque facere, laborum officiis aperiam repellendus quis officia iste neque, fugiat nisi non maxime voluptatum labore quasi ducimus vel illo doloribus saepe? Perspiciatis dolorem voluptas iste itaque illo velit quam possimus aspernatur quod quidem harum ducimus, aliquid unde libero voluptatibus incidunt? Nesciunt animi quas repudiandae sit perspiciatis eveniet nihil accusamus dolorem ipsum. Ipsam dolores id vel! Quasi cumque, in eligendi perspiciatis praesentium facere expedita amet voluptatibus fuga ex enim ipsam cum suscipit! Maiores veniam unde eum impedit tempore quia maxime deserunt accusamus tenetur consequatur aperiam repellat reprehenderit aspernatur nobis quae dignissimos error minima, est quibusdam odit aliquam explicabo quo! Veritatis non vitae doloribus ad doloremque? Voluptatibus omnis ad corporis officiis fugiat dolores doloribus tempora enim reiciendis. Voluptatibus vitae saepe temporibus quas iste culpa totam eius consequuntur molestias esse, dolores mollitia repellendus at assumenda quod in dolor nemo provident nostrum blanditiis atque. Cum quo illum excepturi optio, libero possimus reiciendis harum, adipisci aut minus ipsam inventore odit laudantium suscipit! Eum deleniti possimus non, placeat ea officiis atque amet molestias earum aliquid expedita sed quisquam deserunt. Placeat iusto velit iure debitis, dolorem corrupti doloremque facilis rem! Blanditiis, nostrum quos doloremque quae similique placeat saepe ad temporibus earum soluta suscipit quasi dolorem hic vitae consequatur adipisci at illo inventore officia distinctio mollitia neque velit voluptates eaque. Accusamus non velit facilis ipsa quasi vero aspernatur ipsum, voluptate quo illum quod officiis vitae recusandae fugiat quas nihil deleniti, quidem cumque aperiam consequatur est omnis? Voluptas velit est facilis aliquam nesciunt ex eos minus laudantium tenetur ipsa, consectetur sit ab voluptate incidunt, quidem, sint architecto iure aspernatur. Aperiam magni aliquam quia eaque qui? Similique ducimus suscipit alias dolorem maxime, provident est sequi vero in minus accusantium aliquam, unde laborum assumenda placeat. Voluptate veniam dolores impedit iusto nemo, culpa praesentium perferendis quisquam unde odio inventore optio animi, in, reprehenderit mollitia alias libero.
+                    </div>
+                    <div class="overflow-visible bg-dark-subtle me-1" style="height: 20rem; width: 20rem;">
+                        Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veritatis tenetur, voluptates et nihil nulla quas modi eveniet velit obcaecati rem omnis quae labore laboriosam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo iste distinctio recusandae, minus quasi facilis illo esse nesciunt at pariatur. Aperiam magni aliquam quia eaque qui? Similique ducimus suscipit alias dolorem maxime, provident est sequi vero in minus accusantium aliquam, unde laborum assumenda placeat. Voluptate veniam dolores impedit iusto nemo, culpa praesentium perferendis quisquam unde odio inventore optio animi, in, reprehenderit mollitia alias libero.
+                    </div>
+                    <div class="overflow-x-scroll bg-dark-subtle me-1" style="height: 15rem; width: 20rem;">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum voluptates obcaecati non impedit consectetur aliquid quia repellat facere et nemo quidem dolor ullam similique expedita aut saepe molestias fuga quo amet hic, sunt, officia sequi ipsa temporibus? Dolore repellat corporis reiciendis nobis explicabo pariatur molestiae cupiditate iusto cumque fugit, deleniti qui alias, voluptatem totam voluptate necessitatibus! Accusantium magni accusamus ipsum, quasi magnam quas qui dignissimos tenetur eos ipsam culpa at rem nostrum delectus laborum odio! Doloribus hic, earum eaque aperiam ullam ex. Nulla similique hic modi rerum totam quam, temporibus, magni mollitia assumenda optio rem iste pariatur maxime eius vel minima qui est impedit tempora deserunt distinctio! Sed ullam nihil ad tenetur, culpa excepturi! Deleniti libero, assumenda dolor voluptate porro expedita culpa laudantium, ab, reiciendis quas molestiae nam corrupti odit nostrum odio nobis! Rerum aliquid ex assumenda nisi natus ea repudiandae ducimus voluptatem quisquam, asperiores, eum odio iure accusantium suscipit illum. Quaerat quas veniam ducimus sequi doloremque aut dolor, eveniet officia quidem nostrum, magnam quod, ipsa maxime ex consequuntur quo vero ut! Minima eos perferendis vel aspernatur accusamus amet, corrupti blanditiis culpa ab vitae nisi alias sit deleniti obcaecati. Explicabo voluptatem tempora aliquid recusandae qui atque facere, laborum officiis aperiam repellendus quis officia iste neque, fugiat nisi non maxime voluptatum labore quasi ducimus vel illo doloribus saepe? Perspiciatis dolorem voluptas iste itaque illo velit quam possimus aspernatur quod quidem harum ducimus, aliquid unde libero voluptatibus incidunt? Nesciunt animi quas repudiandae sit perspiciatis eveniet nihil accusamus dolorem ipsum. Ipsam dolores id vel! Quasi cumque, in eligendi perspiciatis praesentium facere expedita amet voluptatibus fuga ex enim ipsam cum suscipit! Maiores veniam unde eum impedit tempore quia maxime deserunt accusamus tenetur consequatur aperiam repellat reprehenderit aspernatur nobis quae dignissimos error minima, est quibusdam odit aliquam explicabo quo! Veritatis non vitae doloribus ad doloremque? Voluptatibus omnis ad corporis officiis fugiat dolores doloribus tempora enim reiciendis. Voluptatibus vitae saepe temporibus quas iste culpa totam eius consequuntur molestias esse, dolores mollitia repellendus at assumenda quod in dolor nemo provident nostrum blanditiis atque. Cum quo illum excepturi optio, libero possimus reiciendis harum, adipisci aut minus ipsam inventore odit laudantium suscipit! Eum deleniti possimus non, placeat ea officiis atque amet molestias earum aliquid expedita sed quisquam deserunt. Placeat iusto velit iure debitis, dolorem corrupti doloremque facilis rem! Blanditiis, nostrum quos doloremque quae similique placeat saepe ad temporibus earum soluta suscipit quasi dolorem hic vitae consequatur adipisci at illo inventore officia distinctio mollitia neque velit voluptates eaque. Accusamus non velit facilis ipsa quasi vero aspernatur ipsum, voluptate quo illum quod officiis vitae recusandae fugiat quas nihil deleniti, quidem cumque aperiam consequatur est omnis? Voluptas velit est facilis aliquam nesciunt ex eos minus laudantium tenetur ipsa, consectetur sit ab voluptate incidunt, quidem, sint architecto iure aspernatur. Aperiam magni aliquam quia eaque qui? Similique ducimus suscipit alias dolorem maxime, provident est sequi vero in minus accusantium aliquam, unde laborum assumenda placeat. Voluptate veniam dolores impedit iusto nemo, culpa praesentium perferendis quisquam unde odio inventore optio animi, in, reprehenderit mollitia alias libero.
+                    </div>
+                </article>
+            </section>
+        
+            <section id="position" class="bg-warning-subtle bg-gradient">
+                <article class="container" style="margin-top: 8rem">
+                    <div class="row justify-content-around gap-2" style="height: 25rem;">
+                        <div class="col-4 bg-dark-subtle position-relative">
+        
+                            <div class="position-absolute top-0 start-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" fill="currentColor" class="bi bi-7-square-fill" viewBox="0 0 16 16">
+                                    <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2Zm3.37 5.11V4.001h5.308V5.15L7.42 12H6.025l3.317-6.82v-.07H5.369Z"/>
+                                  </svg>
+                            </div>
+                            <div class="position-absolute top-0 start-50">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" fill="currentColor" class="bi bi-0-square" viewBox="0 0 16 16">
+                                    <path d="M7.988 12.158c-1.851 0-2.941-1.57-2.941-3.99V7.84c0-2.408 1.101-3.996 2.965-3.996 1.857 0 2.935 1.57 2.935 3.996v.328c0 2.408-1.101 3.99-2.959 3.99ZM8 4.951c-1.008 0-1.629 1.09-1.629 2.895v.31c0 1.81.627 2.895 1.629 2.895s1.623-1.09 1.623-2.895v-.31c0-1.8-.621-2.895-1.623-2.895Z"/>
+                                    <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2Zm15 0a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2Z"/>
+                                  </svg>
+                            </div>
+                            <div class="position-absolute bottom-50 start-50">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" fill="currentColor" class="bi bi-7-square-fill" viewBox="0 0 16 16">
+                                    <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2Zm3.37 5.11V4.001h5.308V5.15L7.42 12H6.025l3.317-6.82v-.07H5.369Z"/>
+                                  </svg>
+                            </div>
+                            <div class="position-absolute top-0 end-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" fill="currentColor" class="bi bi-7-square-fill" viewBox="0 0 16 16">
+                                    <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2Zm3.37 5.11V4.001h5.308V5.15L7.42 12H6.025l3.317-6.82v-.07H5.369Z"/>
+                                  </svg>
+                            </div>
+                            <div class="position-absolute bottom-50 start-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" fill="currentColor" class="bi bi-0-square" viewBox="0 0 16 16">
+                                    <path d="M7.988 12.158c-1.851 0-2.941-1.57-2.941-3.99V7.84c0-2.408 1.101-3.996 2.965-3.996 1.857 0 2.935 1.57 2.935 3.996v.328c0 2.408-1.101 3.99-2.959 3.99ZM8 4.951c-1.008 0-1.629 1.09-1.629 2.895v.31c0 1.81.627 2.895 1.629 2.895s1.623-1.09 1.623-2.895v-.31c0-1.8-.621-2.895-1.623-2.895Z"/>
+                                    <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2Zm15 0a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2Z"/>
+                                  </svg>
+                            </div>
+                            <div class="position-absolute bottom-50 end-50">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" fill="currentColor" class="bi bi-7-square-fill" viewBox="0 0 16 16">
+                                    <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2Zm3.37 5.11V4.001h5.308V5.15L7.42 12H6.025l3.317-6.82v-.07H5.369Z"/>
+                                  </svg>
+                            </div>
+                            <div class="position-absolute top-50 start-50">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" fill="currentColor" class="bi bi-7-square-fill" viewBox="0 0 16 16">
+                                    <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2Zm3.37 5.11V4.001h5.308V5.15L7.42 12H6.025l3.317-6.82v-.07H5.369Z"/>
+                                  </svg>
+                            </div>
+                            <div class="position-absolute top-50 end-50">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" fill="currentColor" class="bi bi-7-square-fill" viewBox="0 0 16 16">
+                                    <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2Zm3.37 5.11V4.001h5.308V5.15L7.42 12H6.025l3.317-6.82v-.07H5.369Z"/>
+                                  </svg>
+                            </div>
+                            <div class="position-absolute top-50 end-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" fill="currentColor" class="bi bi-0-square" viewBox="0 0 16 16">
+                                    <path d="M7.988 12.158c-1.851 0-2.941-1.57-2.941-3.99V7.84c0-2.408 1.101-3.996 2.965-3.996 1.857 0 2.935 1.57 2.935 3.996v.328c0 2.408-1.101 3.99-2.959 3.99ZM8 4.951c-1.008 0-1.629 1.09-1.629 2.895v.31c0 1.81.627 2.895 1.629 2.895s1.623-1.09 1.623-2.895v-.31c0-1.8-.621-2.895-1.623-2.895Z"/>
+                                    <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2Zm15 0a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2Z"/>
+                                  </svg>
+                            </div>
+                            <div class="position-absolute bottom-0 start-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" fill="currentColor" class="bi bi-7-square-fill" viewBox="0 0 16 16">
+                                    <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2Zm3.37 5.11V4.001h5.308V5.15L7.42 12H6.025l3.317-6.82v-.07H5.369Z"/>
+                                  </svg>
+                            </div>
+                            <div class="position-absolute top-50 start-50">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" fill="currentColor" class="bi bi-7-square-fill" viewBox="0 0 16 16">
+                                    <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2Zm3.37 5.11V4.001h5.308V5.15L7.42 12H6.025l3.317-6.82v-.07H5.369Z"/>
+                                  </svg>
+                            </div>
+                            <div class="position-absolute bottom-0 end-50">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" fill="currentColor" class="bi bi-0-square" viewBox="0 0 16 16">
+                                    <path d="M7.988 12.158c-1.851 0-2.941-1.57-2.941-3.99V7.84c0-2.408 1.101-3.996 2.965-3.996 1.857 0 2.935 1.57 2.935 3.996v.328c0 2.408-1.101 3.99-2.959 3.99ZM8 4.951c-1.008 0-1.629 1.09-1.629 2.895v.31c0 1.81.627 2.895 1.629 2.895s1.623-1.09 1.623-2.895v-.31c0-1.8-.621-2.895-1.623-2.895Z"/>
+                                    <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2Zm15 0a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2Z"/>
+                                  </svg>
+                            </div>
+                            <div class="position-absolute bottom-0 end-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" fill="currentColor" class="bi bi-7-square-fill" viewBox="0 0 16 16">
+                                    <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2Zm3.37 5.11V4.001h5.308V5.15L7.42 12H6.025l3.317-6.82v-.07H5.369Z"/>
+                                  </svg>
+                            </div>
+                        </div>
+                        
+                        <div class="col-4 bg-dark-subtle position-relative">
+        
+                            <div class="position-absolute top-0 start-0 translate-middle-x">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" fill="currentColor" class="bi bi-7-square-fill" viewBox="0 0 16 16">
+                                    <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2Zm3.37 5.11V4.001h5.308V5.15L7.42 12H6.025l3.317-6.82v-.07H5.369Z"/>
+                                  </svg>
+                            </div>
+                            <div class="position-absolute top-0 start-50 translate-middle">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" fill="currentColor" class="bi bi-0-square" viewBox="0 0 16 16">
+                                    <path d="M7.988 12.158c-1.851 0-2.941-1.57-2.941-3.99V7.84c0-2.408 1.101-3.996 2.965-3.996 1.857 0 2.935 1.57 2.935 3.996v.328c0 2.408-1.101 3.99-2.959 3.99ZM8 4.951c-1.008 0-1.629 1.09-1.629 2.895v.31c0 1.81.627 2.895 1.629 2.895s1.623-1.09 1.623-2.895v-.31c0-1.8-.621-2.895-1.623-2.895Z"/>
+                                    <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2Zm15 0a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2Z"/>
+                                  </svg>
+                            </div>
+                            <div class="position-absolute bottom-50 start-50 translate-middle">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" fill="currentColor" class="bi bi-7-square-fill" viewBox="0 0 16 16">
+                                    <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2Zm3.37 5.11V4.001h5.308V5.15L7.42 12H6.025l3.317-6.82v-.07H5.369Z"/>
+                                  </svg>
+                            </div>
+                            <div class="position-absolute top-0 start-100 translate-middle-x">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" fill="currentColor" class="bi bi-7-square-fill" viewBox="0 0 16 16">
+                                    <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2Zm3.37 5.11V4.001h5.308V5.15L7.42 12H6.025l3.317-6.82v-.07H5.369Z"/>
+                                  </svg>
+                            </div>
+                            <div class="position-absolute bottom-50 start-0 translate-middle">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" fill="currentColor" class="bi bi-0-square" viewBox="0 0 16 16">
+                                    <path d="M7.988 12.158c-1.851 0-2.941-1.57-2.941-3.99V7.84c0-2.408 1.101-3.996 2.965-3.996 1.857 0 2.935 1.57 2.935 3.996v.328c0 2.408-1.101 3.99-2.959 3.99ZM8 4.951c-1.008 0-1.629 1.09-1.629 2.895v.31c0 1.81.627 2.895 1.629 2.895s1.623-1.09 1.623-2.895v-.31c0-1.8-.621-2.895-1.623-2.895Z"/>
+                                    <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2Zm15 0a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2Z"/>
+                                  </svg>
+                            </div>
+                            <div class="position-absolute bottom-50 end-50 translate-middle">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" fill="currentColor" class="bi bi-7-square-fill" viewBox="0 0 16 16">
+                                    <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2Zm3.37 5.11V4.001h5.308V5.15L7.42 12H6.025l3.317-6.82v-.07H5.369Z"/>
+                                  </svg>
+                            </div>
+                            <div class="position-absolute top-50 start-50 translate-middle">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" fill="currentColor" class="bi bi-7-square-fill" viewBox="0 0 16 16">
+                                    <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2Zm3.37 5.11V4.001h5.308V5.15L7.42 12H6.025l3.317-6.82v-.07H5.369Z"/>
+                                  </svg>
+                            </div>
+                            <div class="position-absolute top-50 end-50 translate-middle">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" fill="currentColor" class="bi bi-7-square-fill" viewBox="0 0 16 16">
+                                    <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2Zm3.37 5.11V4.001h5.308V5.15L7.42 12H6.025l3.317-6.82v-.07H5.369Z"/>
+                                  </svg>
+                            </div>
+                            <div class="position-absolute top-50 start-0 translate-middle">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" fill="currentColor" class="bi bi-0-square" viewBox="0 0 16 16">
+                                    <path d="M7.988 12.158c-1.851 0-2.941-1.57-2.941-3.99V7.84c0-2.408 1.101-3.996 2.965-3.996 1.857 0 2.935 1.57 2.935 3.996v.328c0 2.408-1.101 3.99-2.959 3.99ZM8 4.951c-1.008 0-1.629 1.09-1.629 2.895v.31c0 1.81.627 2.895 1.629 2.895s1.623-1.09 1.623-2.895v-.31c0-1.8-.621-2.895-1.623-2.895Z"/>
+                                    <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2Zm15 0a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2Z"/>
+                                  </svg>
+                            </div>
+                            <div class="position-absolute bottom-50 start-100 translate-middle">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" fill="currentColor" class="bi bi-0-square" viewBox="0 0 16 16">
+                                    <path d="M7.988 12.158c-1.851 0-2.941-1.57-2.941-3.99V7.84c0-2.408 1.101-3.996 2.965-3.996 1.857 0 2.935 1.57 2.935 3.996v.328c0 2.408-1.101 3.99-2.959 3.99ZM8 4.951c-1.008 0-1.629 1.09-1.629 2.895v.31c0 1.81.627 2.895 1.629 2.895s1.623-1.09 1.623-2.895v-.31c0-1.8-.621-2.895-1.623-2.895Z"/>
+                                    <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2Zm15 0a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2Z"/>
+                                  </svg>
+                            </div>
+                            <div class="position-absolute top-50 start-100 translate-middle">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" fill="currentColor" class="bi bi-0-square" viewBox="0 0 16 16">
+                                    <path d="M7.988 12.158c-1.851 0-2.941-1.57-2.941-3.99V7.84c0-2.408 1.101-3.996 2.965-3.996 1.857 0 2.935 1.57 2.935 3.996v.328c0 2.408-1.101 3.99-2.959 3.99ZM8 4.951c-1.008 0-1.629 1.09-1.629 2.895v.31c0 1.81.627 2.895 1.629 2.895s1.623-1.09 1.623-2.895v-.31c0-1.8-.621-2.895-1.623-2.895Z"/>
+                                    <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2Zm15 0a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2Z"/>
+                                  </svg>
+                            </div>
+                            <div class="position-absolute bottom-0 start-0 translate-middle-x">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" fill="currentColor" class="bi bi-7-square-fill" viewBox="0 0 16 16">
+                                    <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2Zm3.37 5.11V4.001h5.308V5.15L7.42 12H6.025l3.317-6.82v-.07H5.369Z"/>
+                                  </svg>
+                            </div>
+                            <div class="position-absolute top-50 start-50 translate-middle">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" fill="currentColor" class="bi bi-7-square-fill" viewBox="0 0 16 16">
+                                    <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2Zm3.37 5.11V4.001h5.308V5.15L7.42 12H6.025l3.317-6.82v-.07H5.369Z"/>
+                                  </svg>
+                            </div>
+                            <div class="position-absolute top-100 end-50 translate-middle">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" fill="currentColor" class="bi bi-0-square" viewBox="0 0 16 16">
+                                    <path d="M7.988 12.158c-1.851 0-2.941-1.57-2.941-3.99V7.84c0-2.408 1.101-3.996 2.965-3.996 1.857 0 2.935 1.57 2.935 3.996v.328c0 2.408-1.101 3.99-2.959 3.99ZM8 4.951c-1.008 0-1.629 1.09-1.629 2.895v.31c0 1.81.627 2.895 1.629 2.895s1.623-1.09 1.623-2.895v-.31c0-1.8-.621-2.895-1.623-2.895Z"/>
+                                    <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2Zm15 0a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2Z"/>
+                                  </svg>
+                            </div>
+                            <div class="position-absolute bottom-0 start-100 translate-middle-x">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" fill="currentColor" class="bi bi-7-square-fill" viewBox="0 0 16 16">
+                                    <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2Zm3.37 5.11V4.001h5.308V5.15L7.42 12H6.025l3.317-6.82v-.07H5.369Z"/>
+                                  </svg>
+                            </div>
+                        </div>    
+                    </div>
+                </article>
+            </section>
+        
+            <section id="shadows" class="bg-warning-subtle bg-gradient">
+                <article class="container" style="margin-top: 8rem;">
+                    <div class="bg-body-tertiary" style="height: 25rem">
+                        <p class="border border-2 border-dark shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis voluptatum suscipit culpa assumenda in eius!
+                        </p>
+                        <p class="border border-2 border-dark shadow p-3 mb-5 bg-body-tertiary rounded">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis voluptatum suscipit culpa assumenda in eius!
+                        </p>
+                        <p class="border border-2 border-dark shadow-none p-3 mb-5 bg-body-tertiary rounded">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis voluptatum suscipit culpa assumenda in eius!
+                        </p>
+                        <p class="border border-2 border-dark shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis voluptatum suscipit culpa assumenda in eius!
+                        </p>
+                    </div>
+                </article>
+            </section>
+        
+            <section id="sizing" class="bg-warning-subtle bg-gradient">
+                <article class="container">
+                    <div class="row justify-content-between py-4" style="margin-top: 8rem">
+                        <div class="col-5 card bg-dark bg-gradient align-items-center" style="height: 12rem; margin-top: 6rem; padding-top:2rem;">
+                            <div class="bg-danger w-25 mb-1 text-white fw-bolder text-center">123</div>
+                            <div class="bg-danger w-50 mb-1 text-white fw-bolder text-center">123</div>
+                            <div class="bg-danger w-75 mb-1 text-white fw-bolder text-center">123</div>
+                            <div class="bg-danger w-100 mb-1 text-white fw-bolder text-center">123</div>
+                        </div>
+                        <div class="col-5 card bg-dark bg-gradient align-items-center" style="height: 25rem;">
+                                <div class="h-25 w-25 bg-danger d-inline-block">Height 25%</div>
+                                <div class="h-50 w-50 bg-success d-inline-block">Height 50%</div>
+                                <div class="h-75 w-75 bg-warning d-inline-block">Height 75%</div>
+                                <div class="h-auto w-100 bg-danger d-inline-block">Height auto</div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        
+            <section id="spacing" class="bg-warning-subtle bg-gradient">
+                <article class="container">
+                    <div class="row justify-content-between py-4" style="margin-top: 8rem">
+                        <div class="col-5 card bg-dark-subtle" style="height: 25rem;">
+                            <div class="d-flex mt-3 justify-content-center">
+                                <button type="button" class="me-5 btn btn-primary w-25">1 2 3</button>
+                                <button type="button" class="ms-1 me-1 btn btn-primary w-25">1 2 3</button>
+                                <button type="button" class="ms-1 btn btn-primary w-25">1 2 3</button>
+                            </div>
+                            <button type="button" class="py-3 mx-auto mt-4 btn btn-dark w-25">1 2 3</button>
+                            <button type="button" class="py-5 mx-auto mt-4 btn btn-dark w-50">1 2 3</button>
+                            <button type="button" class="pt-5 mb-3 mx-auto mt-auto mt-4 btn btn-dark w-25">1 2 3</button>
+                        </div>
+                        <div class="col-5 card bg-dark-subtle" style="height: 25rem;">
+                            <div class="row gap-3 justify-content-center mt-3">
+                                <div class="p-2 col-5 bg-info-subtle text-center">Grid item 1</div>
+                                <div class="p-2 col-5 bg-info-subtle text-center">Grid item 2</div>
+                                <div class="p-2 col-5 bg-info-subtle text-center">Grid item 3</div>
+                                <div class="p-2 col-5 bg-info-subtle text-center">Grid item 4</div>
+                            </div>
+                            <div class="row gap-0 row-gap-3 justify-content-center mt-5">
+                                <div class="p-2 col-5 bg-info-subtle text-center">Grid item 1</div>
+                                <div class="p-2 col-5 bg-info-subtle text-center">Grid item 2</div>
+                                <div class="p-2 col-5 bg-info-subtle text-center">Grid item 3</div>
+                                <div class="p-2 col-5 bg-info-subtle text-center">Grid item 4</div>
+                            </div>
+                            <div class="row gap-0 column-gap-3 justify-content-center mt-5">
+                                <div class="p-2 col-5 bg-info-subtle text-center">Grid item 1</div>
+                                <div class="p-2 col-5 bg-info-subtle text-center">Grid item 2</div>
+                                <div class="p-2 col-5 bg-info-subtle text-center">Grid item 3</div>
+                                <div class="p-2 col-5 bg-info-subtle text-center">Grid item 4</div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        
+            <section id="text" class="bg-warning-subtle bg-gradient">
+                <article class="container" style="margin-top: 8rem;">
+                    <div class="card bg-body-tertiary text-wrap" style="height: 35rem;">
+                        <p class="fs-1 text-end text-lg-start text-decoration-underline fw-bolder fst-italic">SATYMEV JAYTE</p>
+                        <p class="fs-3 text-center text-lg-end font-monospace fw-bold">Jai Jawan</p>
+                        <a href="#" class="text-decoration-none fs-4 fw-bold">Read only</a>
+                        <p class="text-capitalize lh-base"><span class="fw-bold text-uppercase">Lorem ipsum dolor sit amet consectetur adipisicing elit</span> <span class="fw-semibold">Ipsam tempora aliquid asperiores numquam adipisci officia quidem </span> <span class="text-decoration-line-through">earum labore animi amet magni quae minus expedita esse, saepe non est vitae itaque minima suscipit. Omnis mollitia voluptates distinctio neque voluptatem, qui culpa et quae, laudantium eum voluptatibus. Soluta, dolorem impedit deleniti totam officiis sapiente sit voluptatum ipsa doloremque molestias sint iusto perspiciatis earum assumenda. Quidem reiciendis molestias ratione dolorem.</span> At facilis excepturi laudantium harum sapiente temporibus aliquid vel, sint ad corporis assumenda iure voluptatibus quae nostrum rem debitis dolore dicta id aliquam quia obcaecati? Sit earum possimus expedita provident. Blanditiis odio, mollitia enim quibusdam sapiente est optio ea illum aspernatur porro excepturi recusandae sint perferendis amet nostrum cupiditate dicta libero ad doloremque aliquid assumenda saepe ex provident incidunt. Ullam natus itaque quia doloremque sit voluptatibus, porro enim, error laudantium nemo soluta, dignissimos a veritatis unde delectus omnis quis necessitatibus excepturi similique culpa sed. Incidunt aliquid natus sapiente reprehenderit distinctio ipsa. Deserunt enim ex laboriosam perferendis beatae asperiores quidem sint veniam? Natus alias doloremque temporibus sapiente dicta, consequatur debitis itaque pariatur inventore sunt corporis similique fugit at totam et amet, fuga modi culpa quis. Repudiandae obcaecati atque ipsa pariatur saepe aperiam, placeat ducimus itaque illo, voluptates natus doloremque quam assumenda nesciunt culpa. Rerum tempora dolorum porro quidem, id, perspiciatis consequuntur error amet quam cum magni iure eius enim inventore rem totam necessitatibus ratione. Earum voluptatum consequatur eveniet provident asperiores ratione illum quam. Vero veritatis repellat sit debitis sed rem voluptatibus autem mollitia, nesciunt in nemo, aliquid cum doloribus! Soluta excepturi vero, ab laboriosam iure provident voluptates sunt unde aut impedit cupiditate voluptas a totam omnis, sint consectetur. Error saepe et deserunt a, nobis vel odio omnis sunt reiciendis obcaecati doloribus quam, blanditiis distinctio sit illum eius? Sed incidunt, eos aspernatur mollitia laboriosam illum autem vel sequi,</p> 
+                    </div>
+                </article>
+            </section>
+        
+            <section id="vertical-visible" class="bg-warning-subtle bg-gradient">
+                <article class="container" style="margin-top: 8rem;">
+                    <div class="d-flex bg-dark-subtle" style="height: 19rem; width: 100%;">
+                        <div class="invisible">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure obcaecati suscipit quasi voluptatibus sit porro debitis ullam, quod numquam consequatur incidunt! Id, libero quisquam consectetur obcaecati expedita tempore illo dolor! Magnam consequuntur soluta officiis quasi explicabo! Accusantium ipsum sit distinctio. Quos officiis facilis, commodi corporis quam expedita similique cum libero!
+                        </div>
+        
+                        <table style="height: 300px;">
+                            <tbody>
+                              <tr>
+                                <td class="align-baseline fw-bolder bg-info p-3">baseline</td>
+                                <td class="align-top fw-bolder bg-dark bg-gradient text-white p-3">top</td>
+                                <td class="align-middle fw-bolder bg-info p-3">middle</td>
+                                <td class="align-bottom fw-bolder bg-dark bg-gradient text-white p-3">bottom</td>
+                                <td class="align-text-top fw-bolder bg-info bg-gradient p-3">text-top</td>
+                                <td class="align-text-bottom fw-bolder bg-dark bg-gradient text-white p-3">text-bottom</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                    </div>
+                </article>
+            </section>
+        
+            <section id="z-index" class="bg-warning-subtle bg-gradient">
+                <article class="container" style="margin-top: 8rem; height: 25rem;">
+                    <div class="z-3 position-absolute p-5 rounded-3"><img src="./images/media-object-img.jpeg" width="150rem" height="150rem" alt=""></div>
+                    <div class="z-2 position-absolute p-5 rounded-3"><img src="./images/media-object-img.jpeg" class="opacity-50" width="250rem" height="250rem" alt=""></div>
+                    <div class="z-2 position-absolute p-5 rounded-3"><img src="./images/media-object-img.jpeg" class="opacity-75" width="450rem" height="350rem" alt=""></div>
+                </article>
+            </section>
+        </div>
+
+        <aside class="col-lg-2 bg-warning-subtle" id="onscreen-item">
+            <nav class="navbar nav nav-tabs flex-column align-items-center p-3 position-fixed">
+                <a href="#background" class="nav-link fw-bolder py-1 bg-dark-subtle my-1">Background</a>
+                <a href="#border" class="nav-link fw-bolder py-1 bg-dark-subtle my-1">Border</a>
+                <a href="#color" class="nav-link fw-bolder py-1 bg-dark-subtle my-1">Color</a>
+                <a href="#display" class="nav-link fw-bolder py-1 bg-dark-subtle my-1">Display</a>
+                <a href="#flex" class="nav-link fw-bolder py-1 bg-dark-subtle my-1">Flex</a>
+                <a href="#float" class="nav-link fw-bolder py-1 bg-dark-subtle my-1">Float</a>
+                <a href="#interactions" class="nav-link fw-bolder py-1 bg-dark-subtle my-1">Interactions</a>
+                <a href="#links" class="nav-link fw-bolder py-1 bg-dark-subtle my-1">Links</a>
+                <a href="#object-opacity" class="nav-link fw-bolder py-1 bg-dark-subtle my-1">Object & Opacity</a>
+                <a href="#overflow" class="nav-link fw-bolder py-1 bg-dark-subtle my-1">Overflow</a>
+                <a href="#position" class="nav-link fw-bolder py-1 bg-dark-subtle my-1">Position</a>
+                <a href="#shadows" class="nav-link fw-bolder py-1 bg-dark-subtle my-1">Shadows</a>
+                <a href="#sizing" class="nav-link fw-bolder py-1 bg-dark-subtle my-1">Sizing</a>
+                <a href="#spacing" class="nav-link fw-bolder py-1 bg-dark-subtle my-1">Spacing</a>
+                <a href="#text" class="nav-link fw-bolder py-1 bg-dark-subtle my-1">Text</a>
+                <a href="#vertical-visible" class="nav-link fw-bolder py-1 bg-dark-subtle my-1">Vertical & Visible</a>
+                <a href="#z-index" class="nav-link fw-bolder py-1 bg-dark-subtle my-1">Z-index</a>
+            </nav>
+        </aside>
+    </section>
+
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+    integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+    crossorigin="anonymous"
+  ></script>
+</body>
+</html>
