@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+    crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./favicon_io/favicon.ico">
+    <title>I-Portfolio by RoM</title>
+</head>
+<body>
+
+    <!--mobile nav button-->
+    <a href="#" class="mobile-nav-toggle d-xl-none" onclick="show()">
+      <svg width="20px" height="20px" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#fff" stroke="#fff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M64 192h896v76.8H64V192z m0 281.6h896v76.8H64V473.6z m0 281.6h896V832H64v-76.8z" fill="#fff"></path></g></svg>
+    </a> 
+    
+    <header id="header" class="d-none d-xl-block">
+        <div class="d-flex flex-column">
+
+            <div class="profile">
+                <img src="./images/profile-img.jpg" alt="" class="img-fluid rounded-circle">
+                <h1>Alex Smith</h1>
+
+                <div class="social-links mt-3 text-center">
+                  <a href="#" class="twitter"><i class="bx bxl-twitter">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                      <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                    </svg>
+                  </i></a>
+                  <a href="#" class="facebook"><i class="bx bxl-facebook">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                      <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                    </svg>
+                  </i></a>
+                  <a href="#" class="instagram"><i class="bx bxl-instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                      <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                    </svg>
+                  </i></a>
+                  <a href="#" class="google-plus"><i class="bx bxl-skype">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-skype" viewBox="0 0 16 16">
+                      <path d="M4.671 0c.88 0 1.733.247 2.468.702a7.423 7.423 0 0 1 6.02 2.118 7.372 7.372 0 0 1 2.167 5.215c0 .344-.024.687-.072 1.026a4.662 4.662 0 0 1 .6 2.281 4.645 4.645 0 0 1-1.37 3.294A4.673 4.673 0 0 1 11.18 16c-.84 0-1.658-.226-2.37-.644a7.423 7.423 0 0 1-6.114-2.107A7.374 7.374 0 0 1 .529 8.035c0-.363.026-.724.08-1.081a4.644 4.644 0 0 1 .76-5.59A4.68 4.68 0 0 1 4.67 0zm.447 7.01c.18.309.43.572.729.769a7.07 7.07 0 0 0 1.257.653c.492.205.873.38 1.145.523.229.112.437.264.615.448.135.142.21.331.21.528a.872.872 0 0 1-.335.723c-.291.196-.64.289-.99.264a2.618 2.618 0 0 1-1.048-.206 11.44 11.44 0 0 1-.532-.253 1.284 1.284 0 0 0-.587-.15.717.717 0 0 0-.501.176.63.63 0 0 0-.195.491.796.796 0 0 0 .148.482 1.2 1.2 0 0 0 .456.354 5.113 5.113 0 0 0 2.212.419 4.554 4.554 0 0 0 1.624-.265 2.296 2.296 0 0 0 1.08-.801c.267-.39.402-.855.386-1.327a2.09 2.09 0 0 0-.279-1.101 2.53 2.53 0 0 0-.772-.792A7.198 7.198 0 0 0 8.486 7.3a1.05 1.05 0 0 0-.145-.058 18.182 18.182 0 0 1-1.013-.447 1.827 1.827 0 0 1-.54-.387.727.727 0 0 1-.2-.508.805.805 0 0 1 .385-.723 1.76 1.76 0 0 1 .968-.247c.26-.003.52.03.772.096.274.079.542.177.802.293.105.049.22.075.336.076a.6.6 0 0 0 .453-.19.69.69 0 0 0 .18-.496.717.717 0 0 0-.17-.476 1.374 1.374 0 0 0-.556-.354 3.69 3.69 0 0 0-.708-.183 5.963 5.963 0 0 0-1.022-.078 4.53 4.53 0 0 0-1.536.258 2.71 2.71 0 0 0-1.174.784 1.91 1.91 0 0 0-.45 1.287c-.01.37.076.736.25 1.063z"/>
+                    </svg>
+                  </i></a>
+                  <a href="#" class="linkedin"><i class="bx bxl-linkedin">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                      <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                    </svg>
+                  </i></a>
+                </div>
+            </div>
+
+            <nav id="navbar" class="nav-menu navbar">
+               <ul>
+                  <li><a href="#hero" class="nav-link active">
+                    <span>
+                      <svg width="20px" height="20px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M8,11a1,1,0,0,1,1-1h6a1,1,0,0,1,0,2H9A1,1,0,0,1,8,11ZM21.832,9.555A1,1,0,0,1,21,10H20V21a1,1,0,0,1-.293.707,60.628,60.628,0,0,1-.318.214A.99.99,0,0,1,19,22H5a1,1,0,0,1-1-1V10H3a1.054,1.054,0,0,1-.829-.441l0,0a1,1,0,0,1,.278-1.387L6,5.8V3A1,1,0,0,1,8,3V4.465l3.445-2.3h0A1,1,0,0,1,12,2h0a1,1,0,0,1,.555.168l8.249,5.5.75.5A1,1,0,0,1,21.832,9.555ZM14,16H10v4h4Zm4-7.8-6-4-6,4V20H8V15a1,1,0,0,1,1-1h6a1,1,0,0,1,1,1v5h2Z"></path></g></svg>
+                    </span> 
+                    <span>Home</span>
+                    </a>
+                  </li>
+
+                  <li><a href="#about" class="nav-link">
+                    <span>
+                      <svg height="20px" width="20px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><g> <path d="M458.159,404.216c-18.93-33.65-49.934-71.764-100.409-93.431c-28.868,20.196-63.938,32.087-101.745,32.087 c-37.828,0-72.898-11.89-101.767-32.087c-50.474,21.667-81.479,59.782-100.398,93.431C28.731,448.848,48.417,512,91.842,512 c43.426,0,164.164,0,164.164,0s120.726,0,164.153,0C463.583,512,483.269,448.848,458.159,404.216z"></path> <path class="st0" d="M256.005,300.641c74.144,0,134.231-60.108,134.231-134.242v-32.158C390.236,60.108,330.149,0,256.005,0 c-74.155,0-134.252,60.108-134.252,134.242V166.4C121.753,240.533,181.851,300.641,256.005,300.641z"></path> </g> </g></svg>
+                    </span> 
+                    <span>About</span>
+                    </a>
+                  </li>
+
+                  <li><a href="#resume" class="nav-link">
+                    <span>
+                      <svg width="20px" height="20px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><defs></defs><path class="a" d="M39.5,15.5h-9a2,2,0,0,1-2-2v-9h-18a2,2,0,0,0-2,2v35a2,2,0,0,0,2,2h27a2,2,0,0,0,2-2Z"></path><line class="a" x1="28.5" y1="4.5" x2="39.5" y2="15.5"></line></g></svg>
+                    </span> 
+                    <span>Resume</span>
+                    </a>
+                  </li>
+
+                  <li><a href="#portfolio" class="nav-link"> 
+                    <span>
+                      <svg width="20px" height="20px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 526.578 526.578" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M373.619,237.347l84.867-127.049v322.075l-84.441-143.194c12.897-1.644,22.91-12.543,22.91-25.89 C396.949,249.798,386.729,238.807,373.619,237.347z M68.092,0v526.578h43.882V0H68.092z M458.486,0v89.392L357.3,240.864 c-6.591,3.954-11.248,10.672-12.419,18.595l-1.04,1.549l0.757,1.277c-0.012,0.343-0.106,0.662-0.106,1.004 c0,10.227,5.911,18.998,14.446,23.324l99.549,168.794v71.171H125.592V0H458.486z M310.197,212.853H156.866v80.7h153.332V212.853z"></path> </g> </g></svg>
+                    </span>
+                    <span>Portfolio</span>
+                    </a>
+                  </li>
+
+                  <li><a href="#services" class="nav-link">
+                    <span>
+                      <svg width="20px" height="20px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M20.5 8.5V5.5C20.5 5.23478 20.3946 4.98043 20.2071 4.79289C20.0196 4.60536 19.7652 4.5 19.5 4.5H4.5C4.23478 4.5 3.98043 4.60536 3.79289 4.79289C3.60536 4.98043 3.5 5.23478 3.5 5.5V8.5C3.5 8.76522 3.60536 9.01957 3.79289 9.20711C3.98043 9.39464 4.23478 9.5 4.5 9.5C4.23478 9.5 3.98043 9.60536 3.79289 9.79289C3.60536 9.98043 3.5 10.2348 3.5 10.5V13.5C3.5 13.7652 3.60536 14.0196 3.79289 14.2071C3.98043 14.3946 4.23478 14.5 4.5 14.5C4.23478 14.5 3.98043 14.6054 3.79289 14.7929C3.60536 14.9804 3.5 15.2348 3.5 15.5V18.5C3.5 18.7652 3.60536 19.0196 3.79289 19.2071C3.98043 19.3946 4.23478 19.5 4.5 19.5H19.5C19.7652 19.5 20.0196 19.3946 20.2071 19.2071C20.3946 19.0196 20.5 18.7652 20.5 18.5V15.5C20.5 15.2348 20.3946 14.9804 20.2071 14.7929C20.0196 14.6054 19.7652 14.5 19.5 14.5C19.7652 14.5 20.0196 14.3946 20.2071 14.2071C20.3946 14.0196 20.5 13.7652 20.5 13.5V10.5C20.5 10.2348 20.3946 9.98043 20.2071 9.79289C20.0196 9.60536 19.7652 9.5 19.5 9.5C19.7652 9.5 20.0196 9.39464 20.2071 9.20711C20.3946 9.01957 20.5 8.76522 20.5 8.5ZM19.5 18.5H4.5V15.5H19.5V18.5ZM19.5 13.5H4.5V10.5H19.5V13.5ZM19.5 8.5H4.5V5.5H19.5V8.5Z" fill="#ebebeb"></path> <path d="M6.25 7.75C6.66421 7.75 7 7.41421 7 7C7 6.58579 6.66421 6.25 6.25 6.25C5.83579 6.25 5.5 6.58579 5.5 7C5.5 7.41421 5.83579 7.75 6.25 7.75Z" fill="#ebebeb"></path> <path d="M8.75 7.75C9.16421 7.75 9.5 7.41421 9.5 7C9.5 6.58579 9.16421 6.25 8.75 6.25C8.33579 6.25 8 6.58579 8 7C8 7.41421 8.33579 7.75 8.75 7.75Z" fill="#ebebeb"></path> <path d="M6.25 12.75C6.66421 12.75 7 12.4142 7 12C7 11.5858 6.66421 11.25 6.25 11.25C5.83579 11.25 5.5 11.5858 5.5 12C5.5 12.4142 5.83579 12.75 6.25 12.75Z" fill="#ebebeb"></path> <path d="M8.75 12.75C9.16421 12.75 9.5 12.4142 9.5 12C9.5 11.5858 9.16421 11.25 8.75 11.25C8.33579 11.25 8 11.5858 8 12C8 12.4142 8.33579 12.75 8.75 12.75Z" fill="#ebebeb"></path> <path d="M6.25 17.75C6.66421 17.75 7 17.4142 7 17C7 16.5858 6.66421 16.25 6.25 16.25C5.83579 16.25 5.5 16.5858 5.5 17C5.5 17.4142 5.83579 17.75 6.25 17.75Z" fill="#ebebeb"></path> <path d="M8.75 17.75C9.16421 17.75 9.5 17.4142 9.5 17C9.5 16.5858 9.16421 16.25 8.75 16.25C8.33579 16.25 8 16.5858 8 17C8 17.4142 8.33579 17.75 8.75 17.75Z" fill="#ebebeb"></path> </g></svg>
+                    </span>
+                    <span>Services</span>
+                    </a>
+                  </li>
+
+                  <li><a href="#contact" class="nav-link">
+                    <span>
+                      <svg width="20px" height="20px" viewBox="0 0 32.00 32.00" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M29.000,22.000 L3.000,22.000 C1.346,22.000 -0.000,20.654 -0.000,19.000 L-0.000,3.000 C-0.000,1.346 1.346,-0.000 3.000,-0.000 L29.000,-0.000 C30.654,-0.000 32.000,1.346 32.000,3.000 L32.000,19.000 C32.000,20.654 30.654,22.000 29.000,22.000 ZM3.000,20.000 L29.000,20.000 C29.551,20.000 30.000,19.552 30.000,19.000 L30.000,3.317 L16.651,14.759 C16.463,14.920 16.232,15.000 16.000,15.000 C15.768,15.000 15.537,14.920 15.349,14.759 L2.000,3.317 L2.000,19.000 C2.000,19.552 2.449,20.000 3.000,20.000 ZM28.464,2.000 L3.536,2.000 L16.000,12.683 L28.464,2.000 Z"></path> </g></svg>
+                    </span> 
+                    <span>Contact</span>
+                    </a>
+                  </li>
+
+                </ul>
+              </nav>
+        </div>
+    </header>
+
+    <section class="scrollspy" data-bs-spy="scroll" data-bs-target="#navbar" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+
+      <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+        <div class="hero-container" data-aos="fade-in">
+          <h1>Alex Smith</h1>
+          <p>I'm <span class="element"></span></p>
+        </div>
+      </section>
+  
+  
+  
+      <!--Main section for every components-->
+      <main id="main">
+  
+  
+        <!--About section start-->
+        <section id="about">
+          <div class="container">
+            <div class="about-container">
+              
+              <div class="section-title">
+                <h2>About</h2>
+                <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas</p>
+              </div>
+    
+              <div class="row">
+                <div class="col-lg-4 col-11">
+                  <img src="./images/profile-img.jpg" alt="" class="img-fluid">
+                </div>
+                
+                <div class="col-lg-8 pt-4 pt-lg-0">
+                  <h3>UI/UX Designer & Web Developer.</h3>
+                <p class="fst-italic">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                  magna aliqua.
+                </p>
+                <div class="row">
+                  <div class="col-10 col-lg-6">
+                    <ul>
+                      <li>
+                        <svg width="32px" height="28px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.048"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M9.96967 16.2803C9.67678 15.9874 9.67678 15.5126 9.96967 15.2197L13.1893 12L9.96967 8.78033C9.67678 8.48744 9.67678 8.01256 9.96967 7.71967C10.2626 7.42678 10.7374 7.42678 11.0303 7.71967L14.7803 11.4697C15.0732 11.7626 15.0732 12.2374 14.7803 12.5303L11.0303 16.2803C10.7374 16.5732 10.2626 16.5732 9.96967 16.2803Z" fill="#3B87AC"></path> </g></svg>
+                        <strong>Birthday : </strong><span>1 May 1995</span></li>
+                      <li>
+                        <svg width="32px" height="28px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.048"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M9.96967 16.2803C9.67678 15.9874 9.67678 15.5126 9.96967 15.2197L13.1893 12L9.96967 8.78033C9.67678 8.48744 9.67678 8.01256 9.96967 7.71967C10.2626 7.42678 10.7374 7.42678 11.0303 7.71967L14.7803 11.4697C15.0732 11.7626 15.0732 12.2374 14.7803 12.5303L11.0303 16.2803C10.7374 16.5732 10.2626 16.5732 9.96967 16.2803Z" fill="#3B87AC"></path> </g></svg>
+                        <strong>Website : </strong><span>www.example.com</span></li>
+                      <li>
+                        <svg width="32px" height="28px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.048"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M9.96967 16.2803C9.67678 15.9874 9.67678 15.5126 9.96967 15.2197L13.1893 12L9.96967 8.78033C9.67678 8.48744 9.67678 8.01256 9.96967 7.71967C10.2626 7.42678 10.7374 7.42678 11.0303 7.71967L14.7803 11.4697C15.0732 11.7626 15.0732 12.2374 14.7803 12.5303L11.0303 16.2803C10.7374 16.5732 10.2626 16.5732 9.96967 16.2803Z" fill="#3B87AC"></path> </g></svg>
+                        <strong>Phone : </strong><span>+123 456 7890</span></li>
+                      <li>
+                        <svg width="32px" height="28px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.048"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M9.96967 16.2803C9.67678 15.9874 9.67678 15.5126 9.96967 15.2197L13.1893 12L9.96967 8.78033C9.67678 8.48744 9.67678 8.01256 9.96967 7.71967C10.2626 7.42678 10.7374 7.42678 11.0303 7.71967L14.7803 11.4697C15.0732 11.7626 15.0732 12.2374 14.7803 12.5303L11.0303 16.2803C10.7374 16.5732 10.2626 16.5732 9.96967 16.2803Z" fill="#3B87AC"></path> </g></svg>
+                        <strong>City : </strong><span>New York, USA</span></li>
+                    </ul>
+                  </div>
+                  <div class="col-10 col-lg-6">
+                    <ul>
+                      <li>
+                        <svg width="32px" height="28px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.048"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M9.96967 16.2803C9.67678 15.9874 9.67678 15.5126 9.96967 15.2197L13.1893 12L9.96967 8.78033C9.67678 8.48744 9.67678 8.01256 9.96967 7.71967C10.2626 7.42678 10.7374 7.42678 11.0303 7.71967L14.7803 11.4697C15.0732 11.7626 15.0732 12.2374 14.7803 12.5303L11.0303 16.2803C10.7374 16.5732 10.2626 16.5732 9.96967 16.2803Z" fill="#3B87AC"></path> </g></svg>
+                        <strong>Age : </strong><span>30</span></li>
+                      <li>
+                        <svg width="32px" height="28px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.048"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M9.96967 16.2803C9.67678 15.9874 9.67678 15.5126 9.96967 15.2197L13.1893 12L9.96967 8.78033C9.67678 8.48744 9.67678 8.01256 9.96967 7.71967C10.2626 7.42678 10.7374 7.42678 11.0303 7.71967L14.7803 11.4697C15.0732 11.7626 15.0732 12.2374 14.7803 12.5303L11.0303 16.2803C10.7374 16.5732 10.2626 16.5732 9.96967 16.2803Z" fill="#3B87AC"></path> </g></svg>
+                        <strong>Degree : </strong><span>Master</span></li>
+                      <li>
+                        <svg width="32px" height="28px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.048"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M9.96967 16.2803C9.67678 15.9874 9.67678 15.5126 9.96967 15.2197L13.1893 12L9.96967 8.78033C9.67678 8.48744 9.67678 8.01256 9.96967 7.71967C10.2626 7.42678 10.7374 7.42678 11.0303 7.71967L14.7803 11.4697C15.0732 11.7626 15.0732 12.2374 14.7803 12.5303L11.0303 16.2803C10.7374 16.5732 10.2626 16.5732 9.96967 16.2803Z" fill="#3B87AC"></path> </g></svg>
+                        <strong>PhEmailone : </strong><span>email@example.com</span></li>
+                      <li>
+                        <svg width="32px" height="28px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.048"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M9.96967 16.2803C9.67678 15.9874 9.67678 15.5126 9.96967 15.2197L13.1893 12L9.96967 8.78033C9.67678 8.48744 9.67678 8.01256 9.96967 7.71967C10.2626 7.42678 10.7374 7.42678 11.0303 7.71967L14.7803 11.4697C15.0732 11.7626 15.0732 12.2374 14.7803 12.5303L11.0303 16.2803C10.7374 16.5732 10.2626 16.5732 9.96967 16.2803Z" fill="#3B87AC"></path> </g></svg>
+                        <strong>Freelance : </strong><span>Available</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <p>Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis. Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium dolores.</p>
+    
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--About section end-->
+  
+  
+        <!--facts section start-->
+        <section id="facts">
+          <div class="container">
+  
+            <div class="facts-container">
+              <div class="section-title">
+                <h2>Facts</h2>
+                <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+              </div>
+            <div class="row">
+    
+              <div class="col-12 col-md-6 col-lg-3">
+                <div class="d-flex justify-content-lg-center justify-content-start">
+                  <div class="svg-facts">
+                    <svg width="100px" height="100px" viewBox="-7.36 -7.36 30.72 30.72" xmlns="http://www.w3.org/2000/svg" fill="#2179A3" class="bi bi-emoji-smile-upside-down" transform="rotate(180)" stroke="#2179A3" stroke-width="0.00016"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zm0-1a8 8 0 1 1 0 16A8 8 0 0 1 8 0z"></path> <path d="M4.285 6.433a.5.5 0 0 0 .683-.183A3.498 3.498 0 0 1 8 4.5c1.295 0 2.426.703 3.032 1.75a.5.5 0 0 0 .866-.5A4.498 4.498 0 0 0 8 3.5a4.5 4.5 0 0 0-3.898 2.25.5.5 0 0 0 .183.683zM7 9.5C7 8.672 6.552 8 6 8s-1 .672-1 1.5.448 1.5 1 1.5 1-.672 1-1.5zm4 0c0-.828-.448-1.5-1-1.5s-1 .672-1 1.5.448 1.5 1 1.5 1-.672 1-1.5z"></path> </g></svg>
+                  </div>
+                  <div class="fact-details">
+                    <h1>232</h1>
+                  <p><strong>Happy Clients</strong>
+                  <br>consequuntur quae</p>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="col-12 col-md-6 col-lg-3">
+                <div class="d-flex justify-content-lg-center justify-content-start">
+                  <div class="svg-facts">
+                      <svg fill="#1072A1" width="100px" height="100px" viewBox="-6.24 -6.24 36.48 36.48" id="add-contact-book" data-name="Line Color" xmlns="http://www.w3.org/2000/svg" class="icon line-color"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path id="secondary" d="M21,7H19V9h2Zm0,6H19v2h2Z" style="fill: none; stroke: #1072A1; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path><rect id="primary" x="4" y="3" width="15" height="18" rx="1" style="fill: none; stroke: #1072A1; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></rect><path id="secondary-2" data-name="secondary" d="M5,8H3m2,4H3m2,4H3m7-4h4m-2-2v4" style="fill: none; stroke: #1072A1; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path></g></svg>
+                  </div>
+                  <div class="fact-details">
+                    <h1>521</h1>
+                  <p><strong>Projects</strong>
+                  <br>adipisci atque cum quia aut</p>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="col-12 col-md-6 col-lg-3">
+                <div class="d-flex justify-content-lg-center justify-content-start">
+                  <div class="svg-facts">
+                    <svg width="100px" height="100px" viewBox="-8.96 -8.96 49.92 49.92" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#1072A1" stroke="#1072A1"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <defs> <clipPath id="clip-headset"> <rect width="32" height="32"></rect> </clipPath> </defs> <g id="headset" clip-path="url(#clip-headset)"> <g id="Group_3402" data-name="Group 3402" transform="translate(-260)"> <g id="Group_3395" data-name="Group 3395"> <g id="Group_3394" data-name="Group 3394"> <g id="Group_3393" data-name="Group 3393"> <path id="Path_4055" data-name="Path 4055" d="M276,0a12.549,12.549,0,0,0-12.534,12.535v7.414a5.511,5.511,0,0,0,5.505,5.505.92.92,0,0,0,.92-.921V15.365a.92.92,0,0,0-.92-.921,5.477,5.477,0,0,0-3.664,1.408V12.535a10.643,10.643,0,0,1,.308-2.5c1.622-3.32,5.66-5.682,10.385-5.682s8.763,2.362,10.385,5.682a10.643,10.643,0,0,1,.308,2.5v3.317a5.477,5.477,0,0,0-3.664-1.408.92.92,0,0,0-.92.921v9.168a.92.92,0,0,0,.92.921,5.465,5.465,0,0,0,2.478-.6v2.025a2.891,2.891,0,0,1-2.888,2.888h-1.471a1.709,1.709,0,0,0-1.634-1.229h-3.058a1.729,1.729,0,0,0,0,3.458h3.058a1.7,1.7,0,0,0,1.629-1.229h1.476a3.892,3.892,0,0,0,3.888-3.888V24.212a5.5,5.5,0,0,0,2.027-4.263V12.535A12.549,12.549,0,0,0,276,0Zm-7.95,16.4V23.5a3.665,3.665,0,0,1,0-7.094ZM276,3.43a13.393,13.393,0,0,0-8.928,3.234,10.675,10.675,0,0,1,17.856,0A13.393,13.393,0,0,0,276,3.43ZM279.514,31h-3.058a.721.721,0,0,1-.713-.745.713.713,0,0,1,.713-.713h3.058a.722.722,0,0,1,.713.745A.714.714,0,0,1,279.514,31Zm4.436-7.5V16.4a3.665,3.665,0,0,1,0,7.094Z" fill="#1072A1"></path> </g> </g> </g> <g id="Group_3398" data-name="Group 3398"> <g id="Group_3397" data-name="Group 3397"> <g id="Group_3396" data-name="Group 3396"> <path id="Path_4056" data-name="Path 4056" d="M270.813,14.519a.459.459,0,0,0-.46.46v9.94a.46.46,0,0,0,.92,0v-9.94A.459.459,0,0,0,270.813,14.519Z" fill="#1072A1"></path> </g> </g> </g> <g id="Group_3401" data-name="Group 3401"> <g id="Group_3400" data-name="Group 3400"> <g id="Group_3399" data-name="Group 3399"> <path id="Path_4057" data-name="Path 4057" d="M281.647,24.919v-9.94a.46.46,0,0,0-.92,0v9.94a.46.46,0,0,0,.92,0Z" fill="#1072A1"></path> </g> </g> </g> </g> </g> </g></svg>
+                  </div>
+                  <div class="fact-details">
+                    <h1>1453</h1>
+                  <p><strong>Hours Of Support</strong>
+                  <br>aut commodi quaerat</p>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="col-12 col-md-6 col-lg-3">
+                <div class="d-flex justify-content-lg-center justify-content-start">
+                  <div class="svg-facts">
+                    <svg width="100px" height="100px" viewBox="-8.64 -8.64 41.28 41.28" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#1072A1" transform="matrix(-1, 0, 0, 1, 0, 0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M9 2C6.38 2 4.25 4.13 4.25 6.75C4.25 9.32 6.26 11.4 8.88 11.49C8.96 11.48 9.04 11.48 9.1 11.49C9.12 11.49 9.13 11.49 9.15 11.49C9.16 11.49 9.16 11.49 9.17 11.49C11.73 11.4 13.74 9.32 13.75 6.75C13.75 4.13 11.62 2 9 2Z" fill="#1072A1"></path> <path d="M14.0809 14.1489C11.2909 12.2889 6.74094 12.2889 3.93094 14.1489C2.66094 14.9989 1.96094 16.1489 1.96094 17.3789C1.96094 18.6089 2.66094 19.7489 3.92094 20.5889C5.32094 21.5289 7.16094 21.9989 9.00094 21.9989C10.8409 21.9989 12.6809 21.5289 14.0809 20.5889C15.3409 19.7389 16.0409 18.5989 16.0409 17.3589C16.0309 16.1289 15.3409 14.9889 14.0809 14.1489Z" fill="#1072A1"></path> <path d="M19.9894 7.33815C20.1494 9.27815 18.7694 10.9781 16.8594 11.2081C16.8494 11.2081 16.8494 11.2081 16.8394 11.2081H16.8094C16.7494 11.2081 16.6894 11.2081 16.6394 11.2281C15.6694 11.2781 14.7794 10.9681 14.1094 10.3981C15.1394 9.47815 15.7294 8.09815 15.6094 6.59815C15.5394 5.78815 15.2594 5.04815 14.8394 4.41815C15.2194 4.22815 15.6594 4.10815 16.1094 4.06815C18.0694 3.89815 19.8194 5.35815 19.9894 7.33815Z" fill="#1072A1"></path> <path d="M21.9883 16.5904C21.9083 17.5604 21.2883 18.4004 20.2483 18.9704C19.2483 19.5204 17.9883 19.7804 16.7383 19.7504C17.4583 19.1004 17.8783 18.2904 17.9583 17.4304C18.0583 16.1904 17.4683 15.0004 16.2883 14.0504C15.6183 13.5204 14.8383 13.1004 13.9883 12.7904C16.1983 12.1504 18.9783 12.5804 20.6883 13.9604C21.6083 14.7004 22.0783 15.6304 21.9883 16.5904Z" fill="#1072A1"></path> </g></svg>
+                  </div>
+                  <div class="fact-details">
+                    <h1>32</h1>
+                  <p><strong>Hard Workers</strong>
+                  <br>rerum asperiores dolor</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+            
+          </div>
+        </section>
+        <!--facts section end-->
+  
+  
+        <!--skills section start-->
+        <section id="skills">
+          <div class="container">
+            <div class="skills-container">
+  
+              <div class="section-title">
+                <h2>Skills</h2>
+                <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+              </div>
+    
+              <div class="row">
+    
+                <div class="col-12 col-lg-6">
+
+                  <div class="d-flex justify-content-between">
+                    <span style="font-size: 12px; font-weight: 700;">HTML</span><span style="font-size: 12px; font-weight: 600;">100%</span>
+                  </div>
+                  <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar" style="width: 100%"></div>
+                  </div>
+                </div>
+    
+                <div class="col-12 col-lg-6">
+                  <div class="d-flex justify-content-between">
+                    <span style="font-size: 12px; font-weight: 700;">PHP</span><span style="font-size: 12px; font-weight: 600;">80%</span>
+                  </div>
+                  <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar" style="width: 80%"></div>
+                  </div>
+                </div>
+    
+                <div class="col-12 col-lg-6">
+                  <div class="d-flex justify-content-between">
+                    <span style="font-size: 12px; font-weight: 700;">CSS</span><span style="font-size: 12px; font-weight: 600;">90%</span>
+                  </div>
+                  <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar" style="width: 90%"></div>
+                  </div>
+                </div>
+    
+                <div class="col-12 col-lg-6">
+                  <div class="d-flex justify-content-between">
+                    <span style="font-size: 12px; font-weight: 700;">WORDPRESS/CMS</span><span style="font-size: 12px; font-weight: 600;">90%</span>
+                  </div>
+                  <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar" style="width: 90%"></div>
+                  </div>
+                </div>
+    
+                <div class="col-12 col-lg-6">
+                  <div class="d-flex justify-content-between">
+                    <span style="font-size: 12px; font-weight: 700;">JAVASCRIPT</span><span style="font-size: 12px; font-weight: 600;">75%</span>
+                  </div>
+                  <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar" style="width: 75%"></div>
+                  </div>
+                </div>
+    
+                <div class="col-12 col-lg-6">
+                  <div class="d-flex justify-content-between">
+                    <span style="font-size: 12px; font-weight: 700;">PHOTOSHOP</span><span style="font-size: 12px; font-weight: 600;">55%</span>
+                  </div>
+                  <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar" style="width: 55%"></div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </section>
+        <!--skills section end-->
+  
+  
+        <!--resume section start-->
+        <section id="resume">
+          <div class="container">
+            <div class="resume-container">
+              <div class="section-title">
+                <h2>Resume</h2>
+                <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas</p>
+              </div>
+    
+              <div class="row">
+  
+                
+                <div class="col-12 col-lg-6">
+                  <h3 class="mb-4">Sumary</h3>
+                  <div class="resume-data">
+                  <h5>ALEX SMITH</h5>
+                  <p>Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.</p>
+                  <ul>
+                    <li>Portland par 127,Orlando, FL</li>
+                    <li>+(123) 456-7891</li>
+                    <li>alice.barkley@example.com</li>
+                  </ul>
+                  </div>            
+    
+                  <h3 class="my-4">Education</h3>
+                  <div class="resume-data">
+                  <h5>MASTER OF FINE ARTS & GRAPHIC DESIGN</h5>
+                  <button>2015 - 2016</button>
+                  <p>Rochester Institute of Technology, Rochester, NY</p>
+                  <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend</p>
+    
+                  <h5>BACHELOR OF FINE ARTS & GRAPHIC DESIGN</h5>
+                  <button>2010 - 2014</button>
+                  <p>Rochester Institute of Technology, Rochester, NY</p>
+                  <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila</p>
+                  </div>  
+                  
+                </div>
+    
+                <div class="col-12 col-lg-6">
+                  <h3 class="my-4">Professional Experience</h3>
+                  <div class="resume-data">
+                    <h5>SENIOR GRAPHIC DESIGN SPECIALIST</h5>
+                  <button>2019 - Present</button>
+                  <p>Experion, New York, NY</p>
+                  <ul>
+                    <li>Lead in the design, development, and implementation of the graphic, layout, and production communication materials</li>
+                    <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project.</li>
+                    <li>Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design</li>
+                    <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li>
+                  </ul>
+    
+                  <h5>GRAPHIC DESIGN SPECIALIST</h5>
+                  <button>2017 - 2018</button>
+                  <p>Stepping Stone Advertising, New York, NY</p>
+                  <ul>
+                    <li>Developed numerous marketing programs (logos, brochures,infographics, presentations, and advertisements).</li>
+                    <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
+                    <li>Recommended and consulted with clients on the most appropriate graphic design</li>
+                    <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
+                  </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--resume section end-->
+  
+  
+        <!--portfolio section start-->
+        <section id="portfolio">
+          <div class="container">
+  
+            <div class="portfolio-container">
+              <div class="section-title">
+                <h2>Portfolio</h2>
+                <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+              </div>
+  
+              <div class="grid-container">
+                
+                <div class="btn-group">
+                  <button data-name="*" class="btn">ALL</button>   
+                  <button data-name=".app" class="btn">APP</button>
+                  <button data-name=".port-card" class="btn">CARD</button>
+                  <button data-name=".web" class="btn">WEB</button>
+                </div>
+  
+                <div class="grid">                
+                  <img src="./images/portfolio-1.jpg" class="grid-item app" alt="">
+                  <img src="./images/portfolio-2.jpg" class="grid-item web" alt="">
+                  <img src="./images/portfolio-3.jpg" class="grid-item port-card" alt="">
+                  <img src="./images/portfolio-4.jpg" class="grid-item web" alt="">
+                  <img src="./images/portfolio-5.jpg" class="grid-item app" alt="">                
+                  <img src="./images/portfolio-6.jpg" class="grid-item port-card" alt="">
+                  <img src="./images/portfolio-7.jpg" class="grid-item app" alt="">
+                  <img src="./images/portfolio-8.jpg" class="grid-item port-card" alt="">
+                  <img src="./images/portfolio-9.jpg" class="grid-item web" alt="">
+                </div>
+  
+              </div>
+            </div>
+  
+          </div>
+        </section>
+        <!--portfolio section end-->
+  
+  
+        <!--service section start-->
+        <section id="services">
+          <div class="container">
+            <div class="services-container">
+  
+              <div class="section-title">
+                <h2>Services</h2>
+                <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+              </div>
+    
+              <div class="row g-4">
+    
+                <div class="col-12 col-md-6 col-lg-4 d-flex">
+                    <a href="#">
+                      <svg fill="#ffffff" height="60px" width="50px" version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-11.52 -11.52 55.04 55.04" xml:space="preserve" stroke="#ffffff" stroke-width="1.408"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-11.52" y="-11.52" width="55.04" height="55.04" rx="27.52" fill="#2abaea" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M26,9h-2.6c-1.2-3-4.1-5-7.4-5c-3.3,0-6.2,2-7.4,5H6c-1.7,0-3,1.3-3,3v0.6C3,16.1,5.9,19,9.4,19h13.3 c3.5,0,6.4-2.9,6.4-6.4V12C29,10.3,27.7,9,26,9z M16,6c2.2,0,4.1,1.2,5.2,3H10.8C11.9,7.2,13.8,6,16,6z"></path> <path d="M23,21C23,21,23,21,23,21l0,2c0,0.6-0.4,1-1,1s-1-0.4-1-1v-2H11v2c0,0.6-0.4,1-1,1s-1-0.4-1-1v-2c0,0,0,0,0,0 c-2.4-0.1-4.5-1.2-6-2.9V25c0,1.7,1.3,3,3,3h20c1.7,0,3-1.3,3-3v-6.9C27.5,19.8,25.4,20.9,23,21z"></path> </g> </g></svg>
+                    </a>
+                  <span class="ms-4">
+                    <h5>Lorem Ipsum</h5>
+                    Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident
+                  </span>
+                </div>
+    
+                <div class="col-12 col-md-6 col-lg-4 d-flex">
+                  <span>
+                    <svg height="60px" width="50px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-296.96 -296.96 1105.92 1105.92" xml:space="preserve" fill="#fff" stroke="#fff" stroke-width="2.048"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-296.96" y="-296.96" width="1105.92" height="1105.92" rx="552.96" fill="#30a7cf" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:#fff;} </style> <g> <rect x="102.583" y="394.18" class="st0" width="117.236" height="21.82"></rect> <rect x="102.583" y="305.684" class="st0" width="160.305" height="21.82"></rect> <rect x="102.583" y="217.205" class="st0" width="228.367" height="21.82"></rect> <rect x="223.312" y="128.726" class="st0" width="107.638" height="21.82"></rect> <path class="st0" d="M392.765,465.44c0,11.228-9.135,20.38-20.375,20.38H61.141c-11.241,0-20.376-9.151-20.376-20.38V175.998 H165.32c13.773,0,24.976-11.211,24.976-24.988V26.181h182.093c11.24,0,20.375,9.135,20.375,20.364v147.07l26.185-26.18V46.544 C418.949,20.885,398.06,0,372.389,0H183.532c-13.574,0-26.577,5.379-36.164,14.968L29.565,132.78 c-9.598,9.591-14.981,22.606-14.981,36.168V465.44c0,25.675,20.89,46.56,46.557,46.56h311.249c25.671,0,46.56-20.885,46.56-46.56 V340.23l-26.185,26.181V465.44z M167.021,32.345v104.656c0,11.319-4.41,15.721-15.726,15.721H46.639L167.021,32.345z"></path> <path class="st0" d="M493.792,206.746l-27.761-27.761c-4.828-4.832-12.66-4.832-17.492,0l-17.998,17.998l45.258,45.253 l17.993-17.997C498.624,219.406,498.624,211.578,493.792,206.746z"></path> <polygon class="st0" points="262.897,364.632 247.469,425.316 308.15,409.884 "></polygon> <path class="st0" d="M272.152,355.372l45.257,45.254l150.161-150.157l-45.257-45.262L272.152,355.372z M439.801,243.27 L308.973,374.098l-10.285-10.294l130.827-130.828L439.801,243.27z"></path> </g> </g></svg>
+                  </span>
+                  <span class="ms-4">
+                    <h5>Dolor Sitema</h5>
+                    Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata
+                  </span>
+                </div>
+    
+                <div class="col-12 col-md-6 col-lg-4 d-flex">
+                  <span>
+                    <svg height="60px" width="50px" viewBox="-12.64 -12.64 41.28 41.28" xmlns="http://www.w3.org/2000/svg" fill="#ffffff" stroke="#ffffff" stroke-width="0.128"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-12.64" y="-12.64" width="41.28" height="41.28" rx="20.64" fill="#37bbe6" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g fill="#fffff"> <path d="m 9 4 c -0.554688 0 -1 0.445312 -1 1 v 9 c 0 0.554688 0.445312 1 1 1 h 1 c 0.554688 0 1 -0.445312 1 -1 v -9 c 0 -0.554688 -0.445312 -1 -1 -1 z m -4 3 c -0.554688 0 -1 0.445312 -1 1 v 6 c 0 0.554688 0.445312 1 1 1 h 1 c 0.554688 0 1 -0.445312 1 -1 v -6 c 0 -0.554688 -0.445312 -1 -1 -1 z m -4 3 c -0.554688 0 -1 0.445312 -1 1 v 3 c 0 0.554688 0.445312 1 1 1 h 1 c 0.554688 0 1 -0.445312 1 -1 v -3 c 0 -0.554688 -0.445312 -1 -1 -1 z m 0 0"></path> <path d="m 13 1 c -0.554688 0 -1 0.445312 -1 1 v 12 c 0 0.554688 0.445312 1 1 1 h 1 c 0.554688 0 1 -0.445312 1 -1 v -12 c 0 -0.554688 -0.445312 -1 -1 -1 z m 0 0" fill-opacity="0.34902"></path> </g> </g></svg>
+                  </span>
+                  <span class="ms-4">
+                    <h5>Sed ut perspiciatis</h5>
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
+                  </span>
+                </div>
+    
+                <div class="col-12 col-md-6 col-lg-4 d-flex">
+                  <span>
+                    <svg height="60px" width="50px" viewBox="-8 -8 32.00 32.00" xmlns="http://www.w3.org/2000/svg" fill="#fff" class="bi bi-binoculars" stroke="#fff" stroke-width="0.00016"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-8" y="-8" width="32.00" height="32.00" rx="16" fill="#31b2dd" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M3 2.5A1.5 1.5 0 0 1 4.5 1h1A1.5 1.5 0 0 1 7 2.5V5h2V2.5A1.5 1.5 0 0 1 10.5 1h1A1.5 1.5 0 0 1 13 2.5v2.382a.5.5 0 0 0 .276.447l.895.447A1.5 1.5 0 0 1 15 7.118V14.5a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 14.5v-3a.5.5 0 0 1 .146-.354l.854-.853V9.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v.793l.854.853A.5.5 0 0 1 7 11.5v3A1.5 1.5 0 0 1 5.5 16h-3A1.5 1.5 0 0 1 1 14.5V7.118a1.5 1.5 0 0 1 .83-1.342l.894-.447A.5.5 0 0 0 3 4.882V2.5zM4.5 2a.5.5 0 0 0-.5.5V3h2v-.5a.5.5 0 0 0-.5-.5h-1zM6 4H4v.882a1.5 1.5 0 0 1-.83 1.342l-.894.447A.5.5 0 0 0 2 7.118V13h4v-1.293l-.854-.853A.5.5 0 0 1 5 10.5v-1A1.5 1.5 0 0 1 6.5 8h3A1.5 1.5 0 0 1 11 9.5v1a.5.5 0 0 1-.146.354l-.854.853V13h4V7.118a.5.5 0 0 0-.276-.447l-.895-.447A1.5 1.5 0 0 1 12 4.882V4h-2v1.5a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V4zm4-1h2v-.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5V3zm4 11h-4v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5V14zm-8 0H2v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5V14z"></path> </g></svg>
+                  </span>
+                  <span class="ms-4">
+                    <h5>Magni Dolores</h5>
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                  </span>
+                </div>
+    
+                <div class="col-12 col-md-6 col-lg-4 d-flex">
+                  <span>
+                    <svg fill="#fff" height="60px" width="50px" viewBox="-18.88 -18.88 69.76 69.76" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke="#fff" stroke-width="0.00032"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-18.88" y="-18.88" width="69.76" height="69.76" rx="34.88" fill="#34b8e5" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>brightness</title> <path d="M16 10.75c-2.899 0-5.25 2.351-5.25 5.25s2.351 5.25 5.25 5.25c2.899 0 5.25-2.351 5.25-5.25v0c-0.004-2.898-2.352-5.246-5.25-5.25h-0zM16 18.75c-1.519 0-2.75-1.231-2.75-2.75s1.231-2.75 2.75-2.75c1.519 0 2.75 1.231 2.75 2.75v0c-0.002 1.518-1.232 2.748-2.75 2.75h-0zM16 9.25c0.69 0 1.25-0.56 1.25-1.25v0-6c0-0.69-0.56-1.25-1.25-1.25s-1.25 0.56-1.25 1.25v0 6c0 0.69 0.56 1.25 1.25 1.25v0zM16 22.75c-0.69 0-1.25 0.56-1.25 1.25v6c0 0.69 0.56 1.25 1.25 1.25s1.25-0.56 1.25-1.25v0-6c-0-0.69-0.56-1.25-1.25-1.25h-0zM9.25 16c0-0.69-0.56-1.25-1.25-1.25v0h-6c-0.69 0-1.25 0.56-1.25 1.25s0.56 1.25 1.25 1.25v0h6c0.69 0 1.25-0.56 1.25-1.25v0zM30 14.75h-6c-0.69 0-1.25 0.56-1.25 1.25s0.56 1.25 1.25 1.25v0h6c0.69 0 1.25-0.56 1.25-1.25s-0.56-1.25-1.25-1.25v0zM9.459 11.227c0.226 0.226 0.539 0.366 0.884 0.366 0.69 0 1.25-0.56 1.25-1.25 0-0.345-0.14-0.658-0.366-0.884v0l-4.242-4.242c-0.226-0.226-0.539-0.366-0.884-0.366-0.69 0-1.25 0.56-1.25 1.25 0 0.345 0.14 0.658 0.366 0.884v0zM22.541 20.771c-0.226-0.225-0.538-0.364-0.882-0.364-0.691 0-1.251 0.56-1.251 1.251 0 0.344 0.139 0.656 0.364 0.882l4.244 4.244c0.227 0.228 0.541 0.369 0.888 0.369 0.691 0 1.251-0.56 1.251-1.251 0-0.347-0.141-0.661-0.369-0.887l-0-0zM9.459 20.773l-4.242 4.244c-0.227 0.226-0.368 0.539-0.368 0.885 0 0.69 0.559 1.249 1.249 1.249 0.346 0 0.66-0.141 0.886-0.369l4.242-4.244c0.227-0.226 0.368-0.539 0.368-0.885 0-0.69-0.559-1.249-1.249-1.249-0.346 0-0.66 0.141-0.886 0.369l-0 0zM21.656 11.593c0.001 0 0.001 0 0.002 0 0.344 0 0.656-0.14 0.881-0.366l4.244-4.242c0.228-0.226 0.369-0.54 0.369-0.886 0-0.69-0.559-1.249-1.249-1.249-0.346 0-0.659 0.141-0.885 0.368l-4.244 4.242c-0.227 0.226-0.367 0.539-0.367 0.885 0 0.69 0.559 1.249 1.249 1.249 0 0 0.001 0 0.001 0h-0z"></path> </g></svg>
+                  </span>
+                  <span class="ms-4">
+                    <h5>Nemo Enim</h5>
+                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque
+                  </span>
+                </div>
+    
+                <div class="col-12 col-md-6 col-lg-4 d-flex">
+                  <span>
+                    <svg fill="#fff" height="60px" width="50px" viewBox="-49.17 -49.17 198.69 198.69" id="Layer_1" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" stroke="#fff" stroke-width="0.802824"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-49.17" y="-49.17" width="198.69" height="198.69" rx="99.345" fill="#34b8e5" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M32.286,42.441h-9.762c-0.829,0-1.5,0.671-1.5,1.5v9.762c0,0.828,0.671,1.5,1.5,1.5h9.762c0.829,0,1.5-0.672,1.5-1.5 v-9.762C33.786,43.113,33.115,42.441,32.286,42.441z M30.786,52.203h-6.762v-6.762h6.762V52.203z"></path> <path d="M55.054,42.441h-9.762c-0.829,0-1.5,0.671-1.5,1.5v9.762c0,0.828,0.671,1.5,1.5,1.5h9.762c0.828,0,1.5-0.672,1.5-1.5 v-9.762C56.554,43.113,55.882,42.441,55.054,42.441z M53.554,52.203h-6.762v-6.762h6.762V52.203z"></path> <path d="M77.12,42.441h-9.762c-0.828,0-1.5,0.671-1.5,1.5v9.762c0,0.828,0.672,1.5,1.5,1.5h9.762c0.828,0,1.5-0.672,1.5-1.5v-9.762 C78.62,43.113,77.948,42.441,77.12,42.441z M75.62,52.203h-6.762v-6.762h6.762V52.203z"></path> <path d="M32.286,64.677h-9.762c-0.829,0-1.5,0.672-1.5,1.5v9.762c0,0.828,0.671,1.5,1.5,1.5h9.762c0.829,0,1.5-0.672,1.5-1.5 v-9.762C33.786,65.349,33.115,64.677,32.286,64.677z M30.786,74.439h-6.762v-6.762h6.762V74.439z"></path> <path d="M55.054,64.677h-9.762c-0.829,0-1.5,0.672-1.5,1.5v9.762c0,0.828,0.671,1.5,1.5,1.5h9.762c0.828,0,1.5-0.672,1.5-1.5 v-9.762C56.554,65.349,55.882,64.677,55.054,64.677z M53.554,74.439h-6.762v-6.762h6.762V74.439z"></path> <path d="M77.12,64.677h-9.762c-0.828,0-1.5,0.672-1.5,1.5v9.762c0,0.828,0.672,1.5,1.5,1.5h9.762c0.828,0,1.5-0.672,1.5-1.5v-9.762 C78.62,65.349,77.948,64.677,77.12,64.677z M75.62,74.439h-6.762v-6.762h6.762V74.439z"></path> <path d="M89,13.394h-9.907c-0.013,0-0.024,0.003-0.037,0.004V11.4c0-3.268-2.658-5.926-5.926-5.926s-5.926,2.659-5.926,5.926v1.994 H56.041V11.4c0-3.268-2.658-5.926-5.926-5.926s-5.926,2.659-5.926,5.926v1.994H33.025V11.4c0-3.268-2.658-5.926-5.926-5.926 s-5.926,2.659-5.926,5.926v1.995c-0.005,0-0.01-0.001-0.015-0.001h-9.905c-0.829,0-1.5,0.671-1.5,1.5V92.64 c0,0.828,0.671,1.5,1.5,1.5H89c0.828,0,1.5-0.672,1.5-1.5V14.894C90.5,14.065,89.828,13.394,89,13.394z M70.204,11.4 c0-1.614,1.312-2.926,2.926-2.926s2.926,1.312,2.926,2.926v8.277c0,1.613-1.312,2.926-2.926,2.926s-2.926-1.312-2.926-2.926V11.4z M50.115,8.474c1.613,0,2.926,1.312,2.926,2.926v8.277c0,1.613-1.312,2.926-2.926,2.926c-1.614,0-2.926-1.312-2.926-2.926v-4.643 c0.004-0.047,0.014-0.092,0.014-0.141s-0.01-0.094-0.014-0.141V11.4C47.189,9.786,48.501,8.474,50.115,8.474z M24.173,11.4 c0-1.614,1.312-2.926,2.926-2.926c1.613,0,2.926,1.312,2.926,2.926v8.277c0,1.613-1.312,2.926-2.926,2.926 c-1.614,0-2.926-1.312-2.926-2.926V11.4z M87.5,91.14H12.753V16.394h8.405c0.005,0,0.01-0.001,0.015-0.001v3.285 c0,3.268,2.659,5.926,5.926,5.926s5.926-2.658,5.926-5.926v-3.283h11.164v3.283c0,3.268,2.659,5.926,5.926,5.926 s5.926-2.658,5.926-5.926v-3.283h11.163v3.283c0,3.268,2.658,5.926,5.926,5.926s5.926-2.658,5.926-5.926V16.39 c0.013,0,0.024,0.004,0.037,0.004H87.5V91.14z"></path> </g> </g></svg>
+                  </span>
+                  <span class="ms-4">
+                    <h5>Eiusmod Tempor</h5>
+                    Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi
+                  </span>
+                </div>
+    
+              </div>
+  
+            </div>
+          </div>
+        </section>
+        <!--service section end-->
+  
+  
+        <!--testimonial section start-->
+        <section id="testimonials">
+          <div class="container">
+            <div class="testimonial-container">
+              
+              <div class="section-title">
+                <h2>Testimonials</h2>
+                <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+              </div>
+  
+              <div class="swiper">
+  
+                <div class="swiper-wrapper">
+                  
+                  <div class="swiper-slide">
+                    <div class="slides">
+  
+                      <div class="review">
+                          <span>
+                              <svg width="40px" height="40px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#84d9f5" transform="rotate(180)" stroke="#84d9f5" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path fill="none" d="M0 0h24v24H0z"></path> <path d="M19.417 6.679C20.447 7.773 21 9 21 10.989c0 3.5-2.457 6.637-6.03 8.188l-.893-1.378c3.335-1.804 3.987-4.145 4.247-5.621-.537.278-1.24.375-1.929.311-1.804-.167-3.226-1.648-3.226-3.489a3.5 3.5 0 0 1 3.5-3.5c1.073 0 2.099.49 2.748 1.179zm-10 0C10.447 7.773 11 9 11 10.989c0 3.5-2.457 6.637-6.03 8.188l-.893-1.378c3.335-1.804 3.987-4.145 4.247-5.621-.537.278-1.24.375-1.929.311C4.591 12.322 3.17 10.841 3.17 9a3.5 3.5 0 0 1 3.5-3.5c1.073 0 2.099.49 2.748 1.179z"></path> </g> </g></svg>
+                          </span>
+                          Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                          <span>
+                              <svg width="40px" height="40px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#84d9f5" transform="rotate(0)" stroke="#84d9f5" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path fill="none" d="M0 0h24v24H0z"></path> <path d="M19.417 6.679C20.447 7.773 21 9 21 10.989c0 3.5-2.457 6.637-6.03 8.188l-.893-1.378c3.335-1.804 3.987-4.145 4.247-5.621-.537.278-1.24.375-1.929.311-1.804-.167-3.226-1.648-3.226-3.489a3.5 3.5 0 0 1 3.5-3.5c1.073 0 2.099.49 2.748 1.179zm-10 0C10.447 7.773 11 9 11 10.989c0 3.5-2.457 6.637-6.03 8.188l-.893-1.378c3.335-1.804 3.987-4.145 4.247-5.621-.537.278-1.24.375-1.929.311C4.591 12.322 3.17 10.841 3.17 9a3.5 3.5 0 0 1 3.5-3.5c1.073 0 2.099.49 2.748 1.179z"></path> </g> </g></svg>
+                          </span>
+                      </div>
+          
+                      <div class="reviewer">
+                        <img src="./images/testimonials-1.jpg" alt="" class="img-fluid" width="100px" height="100px" style="border-radius: 50%;">
+                        <h4>Saul Goodman</h4>
+                        <p>Ceo & Founder</p>
+                      </div>
+                  </div>
+                  </div>
+  
+                  <div class="swiper-slide">
+                    <div class="slides">
+  
+                      <div class="review">
+                          <span>
+                              <svg width="40px" height="40px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#84d9f5" transform="rotate(180)" stroke="#84d9f5" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path fill="none" d="M0 0h24v24H0z"></path> <path d="M19.417 6.679C20.447 7.773 21 9 21 10.989c0 3.5-2.457 6.637-6.03 8.188l-.893-1.378c3.335-1.804 3.987-4.145 4.247-5.621-.537.278-1.24.375-1.929.311-1.804-.167-3.226-1.648-3.226-3.489a3.5 3.5 0 0 1 3.5-3.5c1.073 0 2.099.49 2.748 1.179zm-10 0C10.447 7.773 11 9 11 10.989c0 3.5-2.457 6.637-6.03 8.188l-.893-1.378c3.335-1.804 3.987-4.145 4.247-5.621-.537.278-1.24.375-1.929.311C4.591 12.322 3.17 10.841 3.17 9a3.5 3.5 0 0 1 3.5-3.5c1.073 0 2.099.49 2.748 1.179z"></path> </g> </g></svg>
+                          </span>
+                          Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                          <span>
+                              <svg width="40px" height="40px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#84d9f5" transform="rotate(0)" stroke="#84d9f5" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path fill="none" d="M0 0h24v24H0z"></path> <path d="M19.417 6.679C20.447 7.773 21 9 21 10.989c0 3.5-2.457 6.637-6.03 8.188l-.893-1.378c3.335-1.804 3.987-4.145 4.247-5.621-.537.278-1.24.375-1.929.311-1.804-.167-3.226-1.648-3.226-3.489a3.5 3.5 0 0 1 3.5-3.5c1.073 0 2.099.49 2.748 1.179zm-10 0C10.447 7.773 11 9 11 10.989c0 3.5-2.457 6.637-6.03 8.188l-.893-1.378c3.335-1.804 3.987-4.145 4.247-5.621-.537.278-1.24.375-1.929.311C4.591 12.322 3.17 10.841 3.17 9a3.5 3.5 0 0 1 3.5-3.5c1.073 0 2.099.49 2.748 1.179z"></path> </g> </g></svg>
+                          </span>
+                      </div>        
+                      <div class="reviewer">
+                        <img src="./images/testimonials-2.jpg" alt="" class="img-fluid" width="100px" height="100px" style="border-radius: 50%;">
+                        <h4>Sara Wilsson</h4>
+                        <p>Designer</p>
+                      </div>
+                  </div>
+                  </div>
+  
+                  <div class="swiper-slide">
+                    <div class="slides">
+  
+                      <div class="review">
+                          <span>
+                              <svg width="40px" height="40px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#84d9f5" transform="rotate(180)" stroke="#84d9f5" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path fill="none" d="M0 0h24v24H0z"></path> <path d="M19.417 6.679C20.447 7.773 21 9 21 10.989c0 3.5-2.457 6.637-6.03 8.188l-.893-1.378c3.335-1.804 3.987-4.145 4.247-5.621-.537.278-1.24.375-1.929.311-1.804-.167-3.226-1.648-3.226-3.489a3.5 3.5 0 0 1 3.5-3.5c1.073 0 2.099.49 2.748 1.179zm-10 0C10.447 7.773 11 9 11 10.989c0 3.5-2.457 6.637-6.03 8.188l-.893-1.378c3.335-1.804 3.987-4.145 4.247-5.621-.537.278-1.24.375-1.929.311C4.591 12.322 3.17 10.841 3.17 9a3.5 3.5 0 0 1 3.5-3.5c1.073 0 2.099.49 2.748 1.179z"></path> </g> </g></svg>
+                          </span>
+                          Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                          <span>
+                              <svg width="40px" height="40px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#84d9f5" transform="rotate(0)" stroke="#84d9f5" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path fill="none" d="M0 0h24v24H0z"></path> <path d="M19.417 6.679C20.447 7.773 21 9 21 10.989c0 3.5-2.457 6.637-6.03 8.188l-.893-1.378c3.335-1.804 3.987-4.145 4.247-5.621-.537.278-1.24.375-1.929.311-1.804-.167-3.226-1.648-3.226-3.489a3.5 3.5 0 0 1 3.5-3.5c1.073 0 2.099.49 2.748 1.179zm-10 0C10.447 7.773 11 9 11 10.989c0 3.5-2.457 6.637-6.03 8.188l-.893-1.378c3.335-1.804 3.987-4.145 4.247-5.621-.537.278-1.24.375-1.929.311C4.591 12.322 3.17 10.841 3.17 9a3.5 3.5 0 0 1 3.5-3.5c1.073 0 2.099.49 2.748 1.179z"></path> </g> </g></svg>
+                          </span>
+                      </div>        
+                      <div class="reviewer">
+                        <img src="./images/testimonials-3.jpg" alt="" class="img-fluid" width="100px" height="100px" style="border-radius: 50%;">
+                        <h4>Jena Karlis</h4>
+                        <p>Store Owner</p>
+                      </div>
+                  </div>
+                  </div>
+  
+                  <div class="swiper-slide">
+                    <div class="slides">
+  
+                      <div class="review">
+                          <span>
+                              <svg width="40px" height="40px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#84d9f5" transform="rotate(180)" stroke="#84d9f5" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path fill="none" d="M0 0h24v24H0z"></path> <path d="M19.417 6.679C20.447 7.773 21 9 21 10.989c0 3.5-2.457 6.637-6.03 8.188l-.893-1.378c3.335-1.804 3.987-4.145 4.247-5.621-.537.278-1.24.375-1.929.311-1.804-.167-3.226-1.648-3.226-3.489a3.5 3.5 0 0 1 3.5-3.5c1.073 0 2.099.49 2.748 1.179zm-10 0C10.447 7.773 11 9 11 10.989c0 3.5-2.457 6.637-6.03 8.188l-.893-1.378c3.335-1.804 3.987-4.145 4.247-5.621-.537.278-1.24.375-1.929.311C4.591 12.322 3.17 10.841 3.17 9a3.5 3.5 0 0 1 3.5-3.5c1.073 0 2.099.49 2.748 1.179z"></path> </g> </g></svg>
+                          </span>
+                          Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                          <span>
+                              <svg width="40px" height="40px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#84d9f5" transform="rotate(0)" stroke="#84d9f5" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path fill="none" d="M0 0h24v24H0z"></path> <path d="M19.417 6.679C20.447 7.773 21 9 21 10.989c0 3.5-2.457 6.637-6.03 8.188l-.893-1.378c3.335-1.804 3.987-4.145 4.247-5.621-.537.278-1.24.375-1.929.311-1.804-.167-3.226-1.648-3.226-3.489a3.5 3.5 0 0 1 3.5-3.5c1.073 0 2.099.49 2.748 1.179zm-10 0C10.447 7.773 11 9 11 10.989c0 3.5-2.457 6.637-6.03 8.188l-.893-1.378c3.335-1.804 3.987-4.145 4.247-5.621-.537.278-1.24.375-1.929.311C4.591 12.322 3.17 10.841 3.17 9a3.5 3.5 0 0 1 3.5-3.5c1.073 0 2.099.49 2.748 1.179z"></path> </g> </g></svg>
+                          </span>
+                      </div>        
+                      <div class="reviewer">
+                        <img src="./images/testimonials-4.jpg" alt="" class="img-fluid" width="100px" height="100px" style="border-radius: 50%;">
+                        <h4>Matt Brandon</h4>
+                        <p>Freelancer</p>
+                      </div>
+                  </div>
+                  </div>
+  
+                  <div class="swiper-slide">
+                    <div class="slides">
+  
+                      <div class="review">
+                          <span>
+                              <svg width="40px" height="40px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#84d9f5" transform="rotate(180)" stroke="#84d9f5" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path fill="none" d="M0 0h24v24H0z"></path> <path d="M19.417 6.679C20.447 7.773 21 9 21 10.989c0 3.5-2.457 6.637-6.03 8.188l-.893-1.378c3.335-1.804 3.987-4.145 4.247-5.621-.537.278-1.24.375-1.929.311-1.804-.167-3.226-1.648-3.226-3.489a3.5 3.5 0 0 1 3.5-3.5c1.073 0 2.099.49 2.748 1.179zm-10 0C10.447 7.773 11 9 11 10.989c0 3.5-2.457 6.637-6.03 8.188l-.893-1.378c3.335-1.804 3.987-4.145 4.247-5.621-.537.278-1.24.375-1.929.311C4.591 12.322 3.17 10.841 3.17 9a3.5 3.5 0 0 1 3.5-3.5c1.073 0 2.099.49 2.748 1.179z"></path> </g> </g></svg>
+                          </span>
+                          Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                          <span>
+                              <svg width="40px" height="40px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#84d9f5" transform="rotate(0)" stroke="#84d9f5" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path fill="none" d="M0 0h24v24H0z"></path> <path d="M19.417 6.679C20.447 7.773 21 9 21 10.989c0 3.5-2.457 6.637-6.03 8.188l-.893-1.378c3.335-1.804 3.987-4.145 4.247-5.621-.537.278-1.24.375-1.929.311-1.804-.167-3.226-1.648-3.226-3.489a3.5 3.5 0 0 1 3.5-3.5c1.073 0 2.099.49 2.748 1.179zm-10 0C10.447 7.773 11 9 11 10.989c0 3.5-2.457 6.637-6.03 8.188l-.893-1.378c3.335-1.804 3.987-4.145 4.247-5.621-.537.278-1.24.375-1.929.311C4.591 12.322 3.17 10.841 3.17 9a3.5 3.5 0 0 1 3.5-3.5c1.073 0 2.099.49 2.748 1.179z"></path> </g> </g></svg>
+                          </span>
+                      </div>                    
+                      <div class="reviewer">
+                        <img src="./images/testimonials-5.jpg" alt="" class="img-fluid" width="100px" height="100px" style="border-radius: 50%;">
+                        <h4>John Larson</h4>
+                        <p>Entrepreneur</p>
+                      </div>
+                  </div>
+                  </div>
+  
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+  
+              </div>
+  
+            </div>
+          </div>
+        </section>
+        <!--testimonial section end-->
+  
+  
+        <!--contact section start-->
+        <section id="contact">
+          <div class="container">
+            <div class="contact-container">
+              
+              <div class="section-title">
+                <h2>Contact</h2>
+                <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+              </div>
+
+              <div class="row gap-5">
+  
+                <div class="col-12 col-lg-5 card shadow">
+                  
+                  <div class="d-flex">
+                    <a href="#" class="contact-link">
+                      <span>
+                        <svg fill="" width="35px" height="25px" viewBox="0 0 32.00 32.00" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke="#3daae1"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M16.114-0.011c-6.559 0-12.114 5.587-12.114 12.204 0 6.93 6.439 14.017 10.77 18.998 0.017 0.020 0.717 0.797 1.579 0.797h0.076c0.863 0 1.558-0.777 1.575-0.797 4.064-4.672 10-12.377 10-18.998 0-6.618-4.333-12.204-11.886-12.204zM16.515 29.849c-0.035 0.035-0.086 0.074-0.131 0.107-0.046-0.032-0.096-0.072-0.133-0.107l-0.523-0.602c-4.106-4.71-9.729-11.161-9.729-17.055 0-5.532 4.632-10.205 10.114-10.205 6.829 0 9.886 5.125 9.886 10.205 0 4.474-3.192 10.416-9.485 17.657zM16.035 6.044c-3.313 0-6 2.686-6 6s2.687 6 6 6 6-2.687 6-6-2.686-6-6-6zM16.035 16.044c-2.206 0-4.046-1.838-4.046-4.044s1.794-4 4-4c2.207 0 4 1.794 4 4 0.001 2.206-1.747 4.044-3.954 4.044z"></path> </g></svg>
+                      </span>
+                    </a>
+                    <div class="contact-info">
+                    <h5>Location:</h5>
+                    <span>A108 Adam Street, New York, NY 535022</span>
+                    </div>
+                  </div>
+  
+                  <div class="d-flex">
+                    <a href="#" class="contact-link">
+                      <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="35px" height="25px" viewBox="0 0 16 16">
+                          <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                        </svg>
+                      </span>
+                    </a>
+                    <div class="contact-info">
+                    <h5>Email:</h5>
+                    <span>info@example.com</span>
+                    </div>
+                  </div>
+  
+                  <div class="d-flex">
+                    <a href="#" class="contact-link">
+                      <span>
+                        <svg width="35px" height="25px" viewBox="0 0 8.4666669 8.4666669" id="svg8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></g><g id="SVGRepo_iconCarrier"> <defs id="defs2"></defs> <g id="layer1" transform="translate(0,-288.53332)"> <path d="m 2.1166666,288.7979 c -0.4351621,0 -0.79375,0.35859 -0.79375,0.79375 v 6.35 c 0,0.43516 0.3585879,0.79375 0.79375,0.79375 h 4.2333333 c 0.4351615,0 0.79375,-0.35859 0.79375,-0.79375 v -6.35 c 0,-0.43516 -0.3585885,-0.79375 -0.79375,-0.79375 z m 0,0.52917 h 4.2333333 c 0.1511403,0 0.2645833,0.11344 0.2645833,0.26458 v 6.35 c 0,0.15114 -0.113443,0.26459 -0.2645833,0.26459 H 2.1166666 c -0.1511396,0 -0.2645833,-0.11345 -0.2645833,-0.26459 v -6.35 c 0,-0.15114 0.1134437,-0.26458 0.2645833,-0.26458 z" id="rect845" style="color:#3dafde;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#3dafde;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#3dafde;solid-opacity:1;vector-effect:none;fill:#3dafde;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.52916664;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"></path> <path d="m 4.4979169,295.41309 a 0.26458335,0.26458335 0 0 1 -0.2645833,0.26458 0.26458335,0.26458335 0 0 1 -0.2645834,-0.26458 0.26458335,0.26458335 0 0 1 0.2645834,-0.26459 0.26458335,0.26458335 0 0 1 0.2645833,0.26459 z" id="path856" style="opacity:1;fill:#3dafde;fill-opacity:1;stroke:none;stroke-width:0.52916664;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"></path> <path d="m 3.7050781,289.85547 a 0.26465,0.26465 0 1 0 0,0.5293 h 1.0566407 a 0.26465,0.26465 0 1 0 0,-0.5293 z" id="path858" style="color:#3dafde;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#3dafde;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#3dafde;solid-opacity:1;vector-effect:none;fill:#3dafde;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.5291667;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"></path> </g> </g></svg>
+                      </span>
+                    </a>
+                    <div class="contact-info">
+                    <h5>Call:</h5>
+                    <span>+1 5589 55488 55s</span>
+                    </div>
+                  </div>
+  
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 95%; height: 320px; padding: 1rem; margin-bottom: 1rem;margin-left: .8rem;" allowfullscreen=""></iframe>
+  
+                </div>
+  
+                <div class="col-12 col-lg-6 card shadow">
+                  <div class="contact-form">
+                    <div class="row">
+  
+                      <div class="col-6">
+                        <div class="mb-3">
+                          <label for="exampleFormControlInput1" class="form-label">Your Name</label>
+                          <input type="email" class="form-control" id="exampleFormControlInput1">
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="mb-3">
+                          <label for="exampleFormControlInput1" class="form-label">Your Email</label>
+                          <input type="email" class="form-control" id="exampleFormControlInput1">
+                        </div>
+                      </div>
+    
+                      <div class="col-12">
+                          <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Subject</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1">
+                          </div>
+                      </div>
+    
+                      <div class="col-12">
+                        <div class="mb-3">
+                          <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="7"></textarea>
+                        </div>
+                      </div>
+  
+                      <div class="col-5 mx-auto">
+                        <button type="button">Send Message</button>
+                      </div>
+    
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--contact section end-->
+  
+      </main>
+
+    </section>
+
+    <footer>
+      <div class="container-fluid d-xl-none">
+        <h6 class="text-center">© Copyright iPortfolio</h6>
+        <div class="text-center">Designed by <span>BootstrapMade</span></div>
+      </div>
+
+      <div class="container d-none d-xl-block">
+        <h6 class="text-center">© Copyright iPortfolio</h6>
+        <div class="text-center">Designed by <span>BootstrapMade</span></div>
+      </div>
+    </footer>
+
+    <a href="#" onclick=onGoToTopClick(this) class="back-to-top">
+      <svg xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"/>
+      </svg>
+    </a>
+
+    
+    <!--for back to top-->
+    <script>
+
+      //canvas or trigger header
+      const header = document.querySelector('#header');
+      
+      let show = function(){
+        // if(header.classList.contains('d-none')){
+        //   header.classList.remove('d-none');
+        // }else{
+        //   header.classList.add('d-none');
+        // }
+        console.log("Is class contain D-none?",header.classList.contains('d-none'))
+        header.classList.contains('d-none') ? header.classList.remove('d-none') : header.classList.add('d-none')
+      }
+      
+
+      //for bottom back to top item
+        let backtotop = document.querySelector('.back-to-top');
+
+            if (backtotop) {
+              const toggleBacktotop = () => {
+            if (window.scrollY > 100) {
+
+              backtotop.classList.add('active')
+            } else {
+              backtotop.classList.remove('active')
+            }
+        }
+          window.addEventListener('load', toggleBacktotop)
+          addEventListener("scroll", toggleBacktotop);
+    }
+
+    const onGoToTopClick = (e) => {
+      console.log("function call", e)
+      this.e.preventdefault()
+    }
+    </script>
+
+    <!--bootstrap cdn-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+      integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--typed cdn for first word design-->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed('.element', {
+        strings: ["Designer ^700", "Developer ^700", "Freelancer ^700", "Photographer ^700"],
+        typeSpeed: 170,
+        smartBackspace: false,
+        loop: true,
+        loopCount: Infinity,
+      });
+    </script>
+     
+    <!--isotope cdn for porfolio animation-->
+    <script src="../jquery/jquery.js"></script>
+    <script src="./isotope.js"></script>
+    <script>
+      
+      var $grid = $('.grid').isotope({
+            itemSelector: '.grid-item',
+            layoutMode: 'fitRows'
+      });
+      
+      $('.btn-group button').on("click", function(){
+        var value = $(this).attr('data-name');
+        $grid.isotope({
+            filter: value
+        });
+      })
+
+    </script>
+
+    <!--swiper cdn for testimonials or feedback-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+    //use as a project with some extra
+    const swiper = new Swiper('.swiper', {
+    speed: 600,
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false
+    },
+    slidesPerView: 'auto',
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20
+      },
+
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 20
+      }
+    }
+});
+
+    </script>
+    
+</body>
+</html>
